@@ -13,6 +13,7 @@ import AppLayout from './components/layout/AppLayout';
 
 // Import screens
 import Homepage from './screens/homepage';
+import Atelier from './screens/Atelier';
 import LoginPage from './screens/Login';
 import RegisterPage from './screens/Register';
 import GalleryPage from './screens/GalleryPage';
@@ -88,7 +89,7 @@ const LayoutWrapper = ({ children }) => {
   const location = useLocation();
 
   // Define paths where Layout (sidebar/header/tabs) should NOT be shown
-  const noLayoutPaths = ['/login', '/register'];
+  const noLayoutPaths = ['/login', '/register', '/atelier'];
   const shouldShowLayout = !noLayoutPaths.includes(location.pathname);
 
   return (
@@ -129,6 +130,7 @@ function App() {
               <Routes>
                 {/* Public Routes - No authentication needed */}
                 <Route path="/" element={<Homepage />} />
+                <Route path="/atelier" element={<Atelier />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<RegisterPage />} />
                 <Route path="/gallery" element={<GalleryPage />} />

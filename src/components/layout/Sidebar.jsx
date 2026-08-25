@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   Home, Image, Ruler, User, ShoppingBag,
-  Sun, Moon, LogOut, LogIn, Circle, X, LayoutDashboard, Calendar, Package, Heart, Scissors, Tags
+  Sun, Moon, LogOut, LogIn, Circle, X, LayoutDashboard, Calendar, Package, Heart, Scissors, Tags, Sparkles
 } from 'lucide-react';
 import { useTheme } from '../../hooks/useTheme';
 import { useAuth } from '../../providers/AuthProvider';
@@ -18,6 +18,7 @@ const Sidebar = ({ isOpen, isMobile, onClose, activeTab }) => {
   // Navigation items. Staff get the admin entry; everyone else the shop links.
   const navItems = [
     { icon: Home, label: 'Home', path: '/' },
+    { icon: Sparkles, label: 'Atelier', path: '/atelier' },
     { icon: Image, label: 'Gallery', path: '/gallery' },
     { icon: ShoppingBag, label: 'Categories', path: '/categories' },
     { icon: ShoppingBag, label: 'All Products', path: '/products' },

@@ -20,6 +20,7 @@ const Footer = () => {
   // Quick links
   const quickLinks = [
     { label: 'Home', path: '/' },
+    { label: 'Atelier', path: '/atelier' },
     { label: 'Gallery', path: '/gallery' },
     { label: 'Products', path: '/products' },
     { label: 'Categories', path: '/categories' },

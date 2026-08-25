@@ -18,7 +18,8 @@ const resolveBaseUrl = () => {
   }
 
   if (typeof window === 'undefined') {
-    return `http://127.0.0.1:${API_PORT}`;
+    // return `http://127.0.0.1:${API_PORT}`;
+    return 'https://squallyline-api.up.railway.app/'
   }
 
   const { protocol, hostname } = window.location;

@@ -42,7 +42,7 @@ const MeasurementsBanner = () => {
     overflow: 'hidden',
     margin: isMobile ? '16px 0' : '24px 0',
     background: colors.surfaceL2,
-    // border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    // border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     display: 'flex',
     flexDirection: isMobile ? 'column' : 'row',
     alignItems: 'center',
@@ -51,8 +51,8 @@ const MeasurementsBanner = () => {
     transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
     boxShadow: isHovered 
       ? isDark 
-        ? '0 12px 48px rgba(0,0,0,0.40), 0 0 0 1px rgba(168, 137, 79,0.06)' 
-        : '0 12px 48px rgba(0,0,0,0.06), 0 0 0 1px rgba(168, 137, 79,0.06)'
+        ? '0 12px 48px rgba(0,0,0,0.40), 0 0 0 1px rgba(212, 175, 55,0.06)' 
+        : '0 12px 48px rgba(0,0,0,0.06), 0 0 0 1px rgba(212, 175, 55,0.06)'
       : 'none',
     transform: isHovered ? 'translateY(-2px)' : 'translateY(0)',
   };
@@ -98,8 +98,8 @@ const MeasurementsBanner = () => {
     gap: '6px',
     padding: isMobile ? '4px 10px' : '6px 14px',
     borderRadius: '20px',
-    background: isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.06)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.12)' : 'rgba(168, 137, 79,0.18)'}`,
+    background: isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.06)',
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.12)' : 'rgba(212, 175, 55,0.18)'}`,
     fontSize: isMobile ? '10px' : '12px',
     fontWeight: 500,
     color: colors.primary,
@@ -158,10 +158,10 @@ const MeasurementsBanner = () => {
     gap: '8px',
     fontSize: isMobile ? '11px' : '13px',
     color: colors.text,
-    background: isDark ? 'rgba(168, 137, 79,0.04)' : 'rgba(168, 137, 79,0.03)',
+    background: isDark ? 'rgba(212, 175, 55,0.04)' : 'rgba(212, 175, 55,0.03)',
     padding: isMobile ? '6px 12px' : '8px 16px',
     borderRadius: '20px',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
   };
 
   const stepNumberStyle = {
@@ -217,8 +217,8 @@ const MeasurementsBanner = () => {
     whiteSpace: 'nowrap',
     boxShadow: isHovered 
       ? isDark 
-        ? '0 8px 32px rgba(168, 137, 79,0.25)' 
-        : '0 8px 32px rgba(168, 137, 79,0.20)'
+        ? '0 8px 32px rgba(212, 175, 55,0.25)' 
+        : '0 8px 32px rgba(212, 175, 55,0.20)'
       : 'none',
     transform: isHovered ? 'scale(1.02)' : 'scale(1)',
     boxSizing: 'border-box',
@@ -322,7 +322,7 @@ const MeasurementsBanner = () => {
           style={buttonStyle}
           onClick={() => navigate('/measurements')}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = isDark ? '#C9B183' : '#8A6F3A';
+            e.currentTarget.style.background = isDark ? '#F0D888' : '#927619';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.background = colors.primary;

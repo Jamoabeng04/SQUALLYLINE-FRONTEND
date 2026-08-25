@@ -67,7 +67,7 @@ const MobileTabs = ({ activeTab }) => {
     border: `1px solid ${glass.tabBarBorder}`,
     borderRadius: '24px',
     boxShadow: isDark
-      ? '0 8px 32px rgba(0,0,0,0.6), 0 1px 0 rgba(168, 137, 79,0.08) inset'
+      ? '0 8px 32px rgba(0,0,0,0.6), 0 1px 0 rgba(212, 175, 55,0.08) inset'
       : '0 8px 32px rgba(0,0,0,0.08), 0 1px 0 rgba(255,255,255,0.8) inset',
     display: 'flex',
     alignItems: 'center',
@@ -83,12 +83,12 @@ const MobileTabs = ({ activeTab }) => {
     height: 'calc(100% - 16px)',
     borderRadius: '14px',
     background: glass.tabActiveBg,
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(255,255,255,0.5)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(255,255,255,0.5)'}`,
     transition: 'left 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
     left: `${pillLeft}px`,
     boxShadow: isDark
-      ? '0 0 20px rgba(168, 137, 79,0.05)'
-      : '0 0 20px rgba(168, 137, 79,0.08)',
+      ? '0 0 20px rgba(212, 175, 55,0.05)'
+      : '0 0 20px rgba(212, 175, 55,0.08)',
   };
 
   const tabStyle = {

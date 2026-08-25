@@ -319,14 +319,14 @@ const ProductDetailsPage = () => {
     const hasHalfStar = rating % 1 >= 0.5;
 
     for (let i = 0; i < fullStars; i++) {
-      stars.push(<Star key={i} size={size} fill="#A8894F" color="#A8894F" />);
+      stars.push(<Star key={i} size={size} fill="#D4AF37" color="#D4AF37" />);
     }
     if (hasHalfStar) {
-      stars.push(<StarHalf key="half" size={size} fill="#A8894F" color="#A8894F" />);
+      stars.push(<StarHalf key="half" size={size} fill="#D4AF37" color="#D4AF37" />);
     }
     const remaining = 5 - stars.length;
     for (let i = 0; i < remaining; i++) {
-      stars.push(<Star key={`empty-${i}`} size={size} color="rgba(168, 137, 79,0.20)" />);
+      stars.push(<Star key={`empty-${i}`} size={size} color="rgba(212,175,55,0.22)" />);
     }
     return stars;
   };
@@ -432,7 +432,7 @@ const ProductDetailsPage = () => {
     padding: '8px 16px',
     borderRadius: '12px',
     background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     cursor: 'pointer',
     color: colors.text,
     fontSize: '13px',
@@ -458,7 +458,7 @@ const ProductDetailsPage = () => {
     overflow: 'hidden',
     borderRadius: '16px',
     backgroundColor: isDark ? '#0A0A0A' : '#F8F6F1',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
     cursor: isZoomed ? 'zoom-out' : 'zoom-in',
     height: isMobile ? '380px' : '600px',
   };
@@ -511,7 +511,7 @@ const ProductDetailsPage = () => {
     borderRadius: '8px',
     objectFit: 'cover',
     cursor: 'pointer',
-    border: isActive ? `2px solid ${colors.primary}` : `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: isActive ? `2px solid ${colors.primary}` : `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     opacity: isActive ? 1 : 0.6,
     transition: 'all 0.2s ease',
     flexShrink: 0,
@@ -597,8 +597,8 @@ const ProductDetailsPage = () => {
     borderRadius: '12px',
     fontSize: '11px',
     fontWeight: 500,
-    background: isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.06)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.12)' : 'rgba(168, 137, 79,0.15)'}`,
+    background: isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.06)',
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.12)' : 'rgba(212, 175, 55,0.15)'}`,
     color: colors.primary,
     display: 'flex',
     alignItems: 'center',
@@ -647,7 +647,7 @@ const ProductDetailsPage = () => {
     cursor: 'pointer',
     background: isActive ? colors.primary : (isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.60)'),
     color: isActive ? '#1A1A1A' : colors.text,
-    border: `1px solid ${isActive ? colors.primary : (isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)')}`,
+    border: `1px solid ${isActive ? colors.primary : (isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)')}`,
     transition: 'all 0.2s ease',
   });
 
@@ -692,7 +692,7 @@ const ProductDetailsPage = () => {
     gap: '8px',
     background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.60)',
     borderRadius: '12px',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     padding: '4px',
   };
 
@@ -748,7 +748,7 @@ const ProductDetailsPage = () => {
     height: '48px',
     borderRadius: '12px',
     background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.20)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212,175,55,0.22)'}`,
     cursor: 'pointer',
     display: 'flex',
     alignItems: 'center',
@@ -761,7 +761,7 @@ const ProductDetailsPage = () => {
     padding: '12px 20px',
     borderRadius: '12px',
     background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.20)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212,175,55,0.22)'}`,
     color: colors.text,
     fontSize: isMobile ? '12px' : '14px',
     fontWeight: 500,
@@ -781,8 +781,8 @@ const ProductDetailsPage = () => {
     gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)',
     gap: '10px',
     padding: '16px 0',
-    borderTop: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
-    borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    borderTop: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
+    borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
   };
 
   const infoCardStyle = {
@@ -814,8 +814,8 @@ const ProductDetailsPage = () => {
   const userMeasurementsStyle = {
     padding: '16px',
     borderRadius: '12px',
-    background: isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.04)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.12)'}`,
+    background: isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.04)',
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.12)'}`,
   };
 
   const measurementsGridStyle = {
@@ -834,7 +834,7 @@ const ProductDetailsPage = () => {
 
   // Section Accordion
   const sectionStyle = {
-    borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     padding: '4px 0',
   };
 
@@ -885,7 +885,7 @@ const ProductDetailsPage = () => {
   const tabsStyle = {
     display: 'flex',
     gap: isMobile ? '12px' : '24px',
-    borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+    borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
     paddingBottom: '8px',
     overflowX: 'auto',
     scrollbarWidth: 'none',
@@ -914,7 +914,7 @@ const ProductDetailsPage = () => {
     padding: '16px',
     borderRadius: '12px',
     background: isDark ? 'rgba(20,20,20,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     marginBottom: '12px',
   };
 
@@ -979,7 +979,7 @@ const ProductDetailsPage = () => {
     padding: '16px',
     borderRadius: '12px',
     background: isDark ? 'rgba(20,20,20,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     marginBottom: '20px',
   };
 
@@ -1079,7 +1079,7 @@ const ProductDetailsPage = () => {
           style={backButtonStyle}
           onClick={() => navigate(-1)}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.06)';
+            e.currentTarget.style.background = isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.06)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.background = isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.60)';
@@ -1110,7 +1110,7 @@ const ProductDetailsPage = () => {
                 <button
                   style={controlButtonStyle}
                   onClick={(e) => { e.stopPropagation(); toggleZoom(); }}
-                  onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(168, 137, 79,0.60)'; }}
+                  onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(212, 175, 55,0.60)'; }}
                   onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(10,10,10,0.60)'; }}
                 >
                   {isZoomed ? <ZoomOut size={16} /> : <ZoomIn size={16} />}
@@ -1118,7 +1118,7 @@ const ProductDetailsPage = () => {
                 <button
                   style={controlButtonStyle}
                   onClick={(e) => { e.stopPropagation(); toggleFullscreen(); }}
-                  onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(168, 137, 79,0.60)'; }}
+                  onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(212, 175, 55,0.60)'; }}
                   onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(10,10,10,0.60)'; }}
                 >
                   <Maximize2 size={16} />
@@ -1278,7 +1278,7 @@ const ProductDetailsPage = () => {
                 disabled={!product.inStock || busy}
                 onMouseEnter={(e) => {
                   if (product.inStock && !busy) {
-                    e.currentTarget.style.background = isDark ? '#C9B183' : '#8A6F3A';
+                    e.currentTarget.style.background = isDark ? '#F0D888' : '#927619';
                   }
                 }}
                 onMouseLeave={(e) => {
@@ -1293,7 +1293,7 @@ const ProductDetailsPage = () => {
                 onClick={handleToggleLike}
                 title={isLiked ? 'Remove from likes' : 'Like this piece'}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.10)';
+                  e.currentTarget.style.background = isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212, 175, 55,0.10)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.60)';
@@ -1310,7 +1310,7 @@ const ProductDetailsPage = () => {
                 onClick={handleBookAppointment}
                 title="Book a consultation"
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.10)';
+                  e.currentTarget.style.background = isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212, 175, 55,0.10)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.60)';
@@ -1430,7 +1430,7 @@ const ProductDetailsPage = () => {
                         <span>{detail}</span>
                       </div>
                     ))}
-                    <div style={{ marginTop: '8px', paddingTop: '8px', borderTop: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}` }}>
+                    <div style={{ marginTop: '8px', paddingTop: '8px', borderTop: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}` }}>
                       <div style={listItemStyle}>
                         <Store size={14} color={colors.primary} style={{ marginTop: '2px', flexShrink: 0 }} />
                         <span>Brand: {product.brand}</span>
@@ -1485,7 +1485,7 @@ const ProductDetailsPage = () => {
                         yours instead.
                       </p>
                     )}
-                    <div style={{ fontSize: '12px', color: colors.secondaryText, padding: '8px', borderRadius: '8px', background: isDark ? 'rgba(168, 137, 79,0.04)' : 'rgba(168, 137, 79,0.03)' }}>
+                    <div style={{ fontSize: '12px', color: colors.secondaryText, padding: '8px', borderRadius: '8px', background: isDark ? 'rgba(212, 175, 55,0.04)' : 'rgba(212, 175, 55,0.03)' }}>
                       <Info size={12} style={{ display: 'inline', marginRight: '4px', verticalAlign: 'middle' }} />
                       Measurements are in inches. Every piece can be adjusted to your own numbers.
                     </div>
@@ -1537,7 +1537,7 @@ const ProductDetailsPage = () => {
                       <MapPin size={14} color={colors.primary} style={{ marginTop: '2px', flexShrink: 0 }} />
                       <span>{product.shippingInfo.international}</span>
                     </div>
-                    <div style={{ marginTop: '8px', paddingTop: '8px', borderTop: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}` }}>
+                    <div style={{ marginTop: '8px', paddingTop: '8px', borderTop: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}` }}>
                       <div style={listItemStyle}>
                         <CreditCard size={14} color={colors.primary} style={{ marginTop: '2px', flexShrink: 0 }} />
                         <span>{product.paymentMethods.join(' • ')}</span>
@@ -1577,8 +1577,8 @@ const ProductDetailsPage = () => {
                     >
                       <Star
                         size={24}
-                        fill={star <= reviewRating ? '#A8894F' : 'none'}
-                        color={star <= reviewRating ? '#A8894F' : 'rgba(168, 137, 79,0.20)'}
+                        fill={star <= reviewRating ? '#D4AF37' : 'none'}
+                        color={star <= reviewRating ? '#D4AF37' : 'rgba(212,175,55,0.22)'}
                       />
                     </button>
                   ))}
@@ -1590,7 +1590,7 @@ const ProductDetailsPage = () => {
                     padding: '12px',
                     borderRadius: '8px',
                     background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.80)',
-                    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+                    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
                     color: colors.text,
                     fontSize: '13px',
                     resize: 'vertical',
@@ -1684,7 +1684,7 @@ const ProductDetailsPage = () => {
                     <span style={similarProductPriceStyle}>{formatPrice(item.price)}</span>
                     {item.rating && (
                       <span style={similarProductRatingStyle}>
-                        <Star size={10} fill="#A8894F" color="#A8894F" />
+                        <Star size={10} fill="#D4AF37" color="#D4AF37" />
                         {item.rating}
                       </span>
                     )}
@@ -1707,7 +1707,7 @@ const ProductDetailsPage = () => {
             <div style={{ overflowX: 'auto' }}>
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
                 <thead>
-                  <tr style={{ background: isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.05)' }}>
+                  <tr style={{ background: isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.05)' }}>
                     <th style={{ padding: '10px', textAlign: 'left', color: colors.text, fontWeight: 600 }}>Size</th>
                     <th style={{ padding: '10px', textAlign: 'left', color: colors.text, fontWeight: 600 }}>Bust</th>
                     <th style={{ padding: '10px', textAlign: 'left', color: colors.text, fontWeight: 600 }}>Waist</th>
@@ -1722,7 +1722,7 @@ const ProductDetailsPage = () => {
                     { size: 'L', bust: '36-38"', waist: '30-32"', hip: '38-40"' },
                     { size: 'XL', bust: '38-40"', waist: '32-34"', hip: '40-42"' },
                   ].map((row) => (
-                    <tr key={row.size} style={{ borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}` }}>
+                    <tr key={row.size} style={{ borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}` }}>
                       <td style={{ padding: '10px', color: colors.text, fontWeight: 600 }}>{row.size}</td>
                       <td style={{ padding: '10px', color: colors.secondaryText }}>{row.bust}</td>
                       <td style={{ padding: '10px', color: colors.secondaryText }}>{row.waist}</td>

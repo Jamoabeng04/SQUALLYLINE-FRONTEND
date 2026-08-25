@@ -293,7 +293,7 @@ const OrderListPage = () => {
     padding: isMobile ? '8px 10px' : '10px 14px',
     borderRadius: '10px',
     background: isDark ? 'rgba(20,20,20,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     textAlign: 'center',
   };
 
@@ -327,7 +327,7 @@ const OrderListPage = () => {
     cursor: 'pointer',
     background: isActive ? colors.primary : 'transparent',
     color: isActive ? '#1A1A1A' : colors.secondaryText,
-    border: `1px solid ${isActive ? colors.primary : isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+    border: `1px solid ${isActive ? colors.primary : isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
     transition: 'all 0.2s ease',
     whiteSpace: 'nowrap',
     fontFamily: 'inherit',
@@ -352,7 +352,7 @@ const OrderListPage = () => {
     padding: isMobile ? '4px 8px 4px 24px' : '5px 10px 5px 28px',
     borderRadius: '12px',
     background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.80)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
     color: colors.text,
     fontSize: isMobile ? '10px' : '11px',
     outline: 'none',
@@ -364,7 +364,7 @@ const OrderListPage = () => {
     padding: isMobile ? '4px 8px' : '5px 12px',
     borderRadius: '12px',
     background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.80)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
     color: colors.text,
     fontSize: isMobile ? '10px' : '11px',
     cursor: 'pointer',
@@ -376,7 +376,7 @@ const OrderListPage = () => {
     marginBottom: isMobile ? '10px' : '12px',
     borderRadius: '12px',
     background: isDark ? 'rgba(20,20,20,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     overflow: 'hidden',
     transition: 'all 0.3s ease',
     boxShadow: isExpanded
@@ -441,7 +441,7 @@ const OrderListPage = () => {
 
   const expandedContentStyle = {
     padding: isMobile ? '0 12px 12px' : '0 16px 16px',
-    borderTop: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    borderTop: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     paddingTop: isMobile ? '10px' : '12px',
   };
 
@@ -486,7 +486,7 @@ const OrderListPage = () => {
     justifyContent: 'space-between',
     gap: '10px',
     padding: '4px 0',
-    borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.04)' : 'rgba(168, 137, 79,0.06)'}`,
+    borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.04)' : 'rgba(212, 175, 55,0.06)'}`,
   };
 
   const detailLabelStyle = {
@@ -520,7 +520,7 @@ const OrderListPage = () => {
     color: isPrimary ? '#1A1A1A' : colors.text,
     border: isPrimary
       ? 'none'
-      : `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+      : `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     cursor: 'pointer',
     fontSize: isMobile ? '11px' : '12px',
     fontWeight: 500,
@@ -687,7 +687,7 @@ const OrderListPage = () => {
             style={actionButtonStyle(true)}
             onClick={() => navigate(`/orders/${order.id}`)}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = isDark ? '#C9B183' : '#8A6F3A';
+              e.currentTarget.style.background = isDark ? '#F0D888' : '#927619';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.background = colors.primary;

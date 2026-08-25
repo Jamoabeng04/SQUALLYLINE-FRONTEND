@@ -394,7 +394,7 @@ const ProfilePage = () => {
     padding: isMobile ? '20px' : '24px',
     borderRadius: '16px',
     background: isDark ? 'rgba(20,20,20,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     marginBottom: '20px',
   };
 
@@ -402,7 +402,7 @@ const ProfilePage = () => {
     padding: isMobile ? '14px' : '16px',
     borderRadius: '12px',
     background: isDark ? 'rgba(20,20,20,0.40)' : 'rgba(255,255,255,0.40)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.04)' : 'rgba(168, 137, 79,0.06)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.04)' : 'rgba(212, 175, 55,0.06)'}`,
   };
 
   const userTopStyle = {
@@ -475,7 +475,7 @@ const ProfilePage = () => {
     padding: '8px 14px',
     borderRadius: '10px',
     background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.80)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     cursor: 'pointer',
     color: colors.text,
     fontSize: '12px',
@@ -598,7 +598,7 @@ const ProfilePage = () => {
     alignItems: 'center',
     gap: '12px',
     padding: '8px 0',
-    borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.04)' : 'rgba(168, 137, 79,0.06)'}`,
+    borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.04)' : 'rgba(212, 175, 55,0.06)'}`,
     cursor: 'pointer',
   };
 
@@ -629,7 +629,7 @@ const ProfilePage = () => {
     padding: '11px 13px',
     borderRadius: '10px',
     background: isDark ? 'rgba(10,10,10,0.60)' : 'rgba(255,255,255,0.80)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     color: colors.text,
     fontSize: '13px',
     fontFamily: 'inherit',
@@ -709,7 +709,7 @@ const ProfilePage = () => {
                 e.currentTarget.style.color = '#EF4444';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)';
+                e.currentTarget.style.borderColor = isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)';
                 e.currentTarget.style.color = colors.text;
               }}
             >
@@ -791,7 +791,7 @@ const ProfilePage = () => {
 
           {/* Edit form */}
           {editing && form && (
-            <div style={{ marginTop: '18px', paddingTop: '18px', borderTop: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.12)'}` }}>
+            <div style={{ marginTop: '18px', paddingTop: '18px', borderTop: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.12)'}` }}>
               <div style={fieldGridStyle}>
                 <div>
                   <label style={labelStyle}>First name</label>
@@ -882,7 +882,7 @@ const ProfilePage = () => {
 
           {/* Change password */}
           {changingPassword && (
-            <div style={{ marginTop: '18px', paddingTop: '18px', borderTop: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.12)'}` }}>
+            <div style={{ marginTop: '18px', paddingTop: '18px', borderTop: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.12)'}` }}>
               <div style={fieldGridStyle}>
                 <div>
                   <label style={labelStyle}>Current password</label>
@@ -1084,7 +1084,7 @@ const ProfilePage = () => {
                     style={styleItemStyle}
                     onClick={() => navigate(`/styles/order/${style.slug || style.id}`)}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.background = isDark ? 'rgba(168, 137, 79,0.04)' : 'rgba(168, 137, 79,0.02)';
+                      e.currentTarget.style.background = isDark ? 'rgba(212, 175, 55,0.04)' : 'rgba(212, 175, 55,0.02)';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.background = 'transparent';

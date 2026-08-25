@@ -417,7 +417,7 @@ const StyleOrderPage = () => {
     padding: '8px 16px',
     borderRadius: '12px',
     background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     cursor: 'pointer',
     color: colors.text,
     fontSize: '13px',
@@ -432,7 +432,7 @@ const StyleOrderPage = () => {
     padding: '20px',
     borderRadius: '16px',
     background: isDark ? 'rgba(20,20,20,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
     marginBottom: '24px',
     flexWrap: 'wrap',
   };
@@ -465,7 +465,7 @@ const StyleOrderPage = () => {
     marginBottom: '20px',
     borderRadius: '16px',
     background: isDark ? 'rgba(20,20,20,0.40)' : 'rgba(255,255,255,0.40)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     overflow: 'hidden',
   };
 
@@ -501,11 +501,11 @@ const StyleOrderPage = () => {
     cursor: 'pointer',
     background: isSelected
       ? isDark
-        ? 'rgba(168, 137, 79,0.12)'
-        : 'rgba(168, 137, 79,0.08)'
+        ? 'rgba(212, 175, 55,0.12)'
+        : 'rgba(212, 175, 55,0.08)'
       : 'transparent',
     border: `1px solid ${
-      isSelected ? colors.primary : isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'
+      isSelected ? colors.primary : isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'
     }`,
     transition: 'all 0.2s ease',
     marginBottom: '8px',
@@ -544,11 +544,11 @@ const StyleOrderPage = () => {
     cursor: 'pointer',
     background: isSelected
       ? isDark
-        ? 'rgba(168, 137, 79,0.12)'
-        : 'rgba(168, 137, 79,0.08)'
+        ? 'rgba(212, 175, 55,0.12)'
+        : 'rgba(212, 175, 55,0.08)'
       : 'transparent',
     border: `1px solid ${
-      isSelected ? accent : isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'
+      isSelected ? accent : isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'
     }`,
     transition: 'all 0.2s ease',
     marginBottom: '8px',
@@ -578,7 +578,7 @@ const StyleOrderPage = () => {
     padding: '10px 14px',
     borderRadius: '8px',
     background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.80)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     color: colors.text,
     fontSize: '13px',
     outline: 'none',
@@ -618,7 +618,7 @@ const StyleOrderPage = () => {
         : 'rgba(255,255,255,0.80)',
     color: isSelected ? '#1A1A1A' : colors.secondaryText,
     border: `1px solid ${
-      isSelected ? colors.primary : isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'
+      isSelected ? colors.primary : isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'
     }`,
     transition: 'all 0.2s ease',
     display: 'inline-flex',
@@ -634,7 +634,7 @@ const StyleOrderPage = () => {
     background: isDark ? 'rgba(10,10,10,0.95)' : 'rgba(248,246,241,0.95)',
     backdropFilter: 'blur(20px)',
     WebkitBackdropFilter: 'blur(20px)',
-    borderTop: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+    borderTop: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -751,8 +751,8 @@ const StyleOrderPage = () => {
           onClick={() => navigate(-1)}
           onMouseEnter={(e) => {
             e.currentTarget.style.background = isDark
-              ? 'rgba(168, 137, 79,0.10)'
-              : 'rgba(168, 137, 79,0.06)';
+              ? 'rgba(212, 175, 55,0.10)'
+              : 'rgba(212, 175, 55,0.06)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.background = isDark
@@ -819,8 +819,8 @@ const StyleOrderPage = () => {
                     formStep > index
                       ? colors.primary
                       : isDark
-                        ? 'rgba(168, 137, 79,0.10)'
-                        : 'rgba(168, 137, 79,0.15)'
+                        ? 'rgba(212, 175, 55,0.10)'
+                        : 'rgba(212, 175, 55,0.15)'
                   }`,
                   display: 'flex',
                   alignItems: 'center',
@@ -838,7 +838,7 @@ const StyleOrderPage = () => {
                   style={{
                     flex: 1,
                     height: '1px',
-                    background: isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)',
+                    background: isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)',
                     margin: '0 8px',
                   }}
                 />
@@ -1121,7 +1121,7 @@ const StyleOrderPage = () => {
                       marginTop: '12px',
                       padding: '12px',
                       borderRadius: '8px',
-                      background: isDark ? 'rgba(168, 137, 79,0.04)' : 'rgba(168, 137, 79,0.03)',
+                      background: isDark ? 'rgba(212, 175, 55,0.04)' : 'rgba(212, 175, 55,0.03)',
                     }}
                   >
                     <p style={{ fontSize: '12px', color: colors.secondaryText, margin: 0 }}>
@@ -1367,7 +1367,7 @@ const StyleOrderPage = () => {
                       height: '36px',
                       borderRadius: '8px',
                       background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.80)',
-                      border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+                      border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
                       cursor: 'pointer',
                       display: 'flex',
                       alignItems: 'center',
@@ -1395,7 +1395,7 @@ const StyleOrderPage = () => {
                       height: '36px',
                       borderRadius: '8px',
                       background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.80)',
-                      border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+                      border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
                       cursor: 'pointer',
                       display: 'flex',
                       alignItems: 'center',
@@ -1429,7 +1429,7 @@ const StyleOrderPage = () => {
         <div
           style={{
             ...sectionStyle,
-            borderColor: isDark ? 'rgba(168, 137, 79,0.12)' : 'rgba(168, 137, 79,0.15)',
+            borderColor: isDark ? 'rgba(212, 175, 55,0.12)' : 'rgba(212, 175, 55,0.15)',
           }}
         >
           <div style={{ padding: '16px 20px' }}>
@@ -1499,7 +1499,7 @@ const StyleOrderPage = () => {
             disabled={!agreedToTerms || submitting}
             onMouseEnter={(e) => {
               if (agreedToTerms && !submitting) {
-                e.currentTarget.style.background = isDark ? '#C9B183' : '#8A6F3A';
+                e.currentTarget.style.background = isDark ? '#F0D888' : '#927619';
                 e.currentTarget.style.transform = 'scale(1.02)';
               }
             }}
@@ -1566,7 +1566,7 @@ const StyleOrderPage = () => {
               style={{
                 padding: '12px',
                 borderRadius: '8px',
-                background: isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.04)',
+                background: isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.04)',
                 marginBottom: '16px',
               }}
             >

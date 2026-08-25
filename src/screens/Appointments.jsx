@@ -251,7 +251,7 @@ const MyAppointmentsPage = () => {
     padding: '8px 14px',
     borderRadius: '10px',
     background: 'transparent',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.20)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212, 175, 55,0.20)'}`,
     color: colors.text,
     cursor: 'pointer',
     fontSize: '12px',
@@ -273,7 +273,7 @@ const MyAppointmentsPage = () => {
     padding: '10px 14px',
     borderRadius: '10px',
     background: isDark ? 'rgba(20,20,20,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     display: 'flex',
     alignItems: 'center',
     gap: '10px',
@@ -288,8 +288,8 @@ const MyAppointmentsPage = () => {
         ? `${color}20`
         : `${color}15`
       : isDark
-      ? 'rgba(168, 137, 79,0.10)'
-      : 'rgba(168, 137, 79,0.06)',
+      ? 'rgba(212, 175, 55,0.10)'
+      : 'rgba(212, 175, 55,0.06)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -328,7 +328,7 @@ const MyAppointmentsPage = () => {
     background: isActive ? colors.primary : 'transparent',
     color: isActive ? '#1A1A1A' : colors.secondaryText,
     border: `1px solid ${
-      isActive ? colors.primary : isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'
+      isActive ? colors.primary : isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'
     }`,
     transition: 'all 0.2s ease',
     whiteSpace: 'nowrap',
@@ -348,7 +348,7 @@ const MyAppointmentsPage = () => {
     padding: '5px 10px 5px 28px',
     borderRadius: '14px',
     background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.80)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
     color: colors.text,
     fontSize: '11px',
     outline: 'none',
@@ -366,7 +366,7 @@ const MyAppointmentsPage = () => {
     display: 'flex',
     borderRadius: '10px',
     background: isDark ? 'rgba(20,20,20,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     overflow: 'hidden',
     cursor: 'pointer',
     transition: 'all 0.2s ease',
@@ -386,7 +386,7 @@ const MyAppointmentsPage = () => {
     justifyContent: 'center',
     gap: '2px',
     background: isDark ? 'rgba(0,0,0,0.20)' : 'rgba(0,0,0,0.02)',
-    borderRight: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.06)'}`,
+    borderRight: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.06)'}`,
     opacity: dimmed ? 0.55 : 1,
   });
 
@@ -804,7 +804,7 @@ const MyAppointmentsPage = () => {
                       navigate(`/appointments/${apt.id}`);
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.background = isDark ? '#C9B183' : '#8A6F3A';
+                      e.currentTarget.style.background = isDark ? '#F0D888' : '#927619';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.background = colors.primary;

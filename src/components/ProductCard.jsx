@@ -76,7 +76,7 @@ const ProductCard = ({ product, onPress, onAction }) => {
     overflow: 'hidden',
     borderRadius: '16px',
     backgroundColor: isDark ? '#0A0A0A' : '#F8F6F1',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
     transform: isHovered ? 'translateY(-2px)' : 'translateY(0)',
     boxShadow: isHovered 
@@ -107,7 +107,7 @@ const ProductCard = ({ product, onPress, onAction }) => {
       : 'rgba(255,255,255,0.85)',
     backdropFilter: 'blur(12px)',
     WebkitBackdropFilter: 'blur(12px)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.20)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212, 175, 55,0.20)'}`,
     fontSize: '14px',
     fontWeight: 700,
     color: colors.primary,
@@ -128,9 +128,9 @@ const ProductCard = ({ product, onPress, onAction }) => {
     textTransform: 'uppercase',
     zIndex: 2,
     ...(type === 'new' && {
-      background: isDark ? 'rgba(168, 137, 79,0.20)' : 'rgba(168, 137, 79,0.15)',
+      background: isDark ? 'rgba(212, 175, 55,0.20)' : 'rgba(212, 175, 55,0.15)',
       color: colors.primary,
-      border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.20)' : 'rgba(168, 137, 79,0.25)'}`,
+      border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.20)' : 'rgba(212, 175, 55,0.25)'}`,
     }),
     ...(type === 'sale' && {
       background: '#CC0000',
@@ -160,7 +160,7 @@ const ProductCard = ({ product, onPress, onAction }) => {
     gap: '8px',
     padding: '10px 12px 12px',
     borderRadius: '12px',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.12)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.12)' : 'rgba(212, 175, 55,0.15)'}`,
     background: isDark ? 'rgba(20,20,20,0.40)' : 'rgba(255,255,255,0.40)',
     backdropFilter: 'blur(8px)',
     WebkitBackdropFilter: 'blur(8px)',
@@ -200,7 +200,7 @@ const ProductCard = ({ product, onPress, onAction }) => {
     justifyContent: 'space-between',
     gap: '8px',
     paddingTop: '8px',
-    borderTop: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+    borderTop: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
   };
 
   const actionButtonsStyle = {
@@ -254,7 +254,7 @@ const ProductCard = ({ product, onPress, onAction }) => {
     background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(248,246,241,0.60)',
     borderRadius: '14px',
     padding: '2px',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
   };
 
   const quantityButtonStyle = {
@@ -331,8 +331,8 @@ const ProductCard = ({ product, onPress, onAction }) => {
               onClick={handleLike}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = isDark 
-                  ? 'rgba(168, 137, 79,0.10)' 
-                  : 'rgba(168, 137, 79,0.08)';
+                  ? 'rgba(212, 175, 55,0.10)' 
+                  : 'rgba(212, 175, 55,0.08)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = 'transparent';
@@ -349,8 +349,8 @@ const ProductCard = ({ product, onPress, onAction }) => {
               onClick={handleShare}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = isDark 
-                  ? 'rgba(168, 137, 79,0.10)' 
-                  : 'rgba(168, 137, 79,0.08)';
+                  ? 'rgba(212, 175, 55,0.10)' 
+                  : 'rgba(212, 175, 55,0.08)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = 'transparent';
@@ -368,8 +368,8 @@ const ProductCard = ({ product, onPress, onAction }) => {
                   onClick={(e) => handleQuantityChange(e, -1)}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.background = isDark 
-                      ? 'rgba(168, 137, 79,0.10)' 
-                      : 'rgba(168, 137, 79,0.08)';
+                      ? 'rgba(212, 175, 55,0.10)' 
+                      : 'rgba(212, 175, 55,0.08)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.background = 'transparent';
@@ -383,8 +383,8 @@ const ProductCard = ({ product, onPress, onAction }) => {
                   onClick={(e) => handleQuantityChange(e, 1)}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.background = isDark 
-                      ? 'rgba(168, 137, 79,0.10)' 
-                      : 'rgba(168, 137, 79,0.08)';
+                      ? 'rgba(212, 175, 55,0.10)' 
+                      : 'rgba(212, 175, 55,0.08)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.background = 'transparent';
@@ -399,8 +399,8 @@ const ProductCard = ({ product, onPress, onAction }) => {
                 onClick={handleAddToCart}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = isDark 
-                    ? '#C9B183' 
-                    : '#8A6F3A';
+                    ? '#F0D888'
+                    : '#927619';
                   e.currentTarget.style.transform = 'scale(1.04)';
                 }}
                 onMouseLeave={(e) => {

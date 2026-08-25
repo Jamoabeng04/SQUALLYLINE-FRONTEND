@@ -39,7 +39,7 @@ const HomeBanner = () => {
     transform: 'translateY(-50%)',
     fontSize: 'clamp(180px, 25vw, 350px)',
     fontWeight: 900,
-    color: isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)',
+    color: isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)',
     letterSpacing: '8px',
     fontFamily: "'Georgia', serif",
     zIndex: 1,
@@ -84,7 +84,7 @@ const HomeBanner = () => {
   const subtitleStyle = {
     fontSize: 'clamp(10px, 1.2vw, 16px)',
     fontWeight: 400,
-    color: isDark ? 'rgba(168, 137, 79,0.70)' : 'rgba(168, 137, 79,0.80)',
+    color: isDark ? 'rgba(212, 175, 55,0.70)' : 'rgba(212, 175, 55,0.80)',
     letterSpacing: '0.3em',
     marginTop: '6px',
     textTransform: 'uppercase',

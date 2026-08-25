@@ -96,7 +96,7 @@ function Scene({ field, gender, gold, dark }) {
 export default function MeasureModel3D({ field, gender }) {
   const { colors, theme } = useTheme();
   const [webgl] = useState(hasWebGL);
-  const gold = colors?.primary || '#A8894F';
+  const gold = colors?.primary || '#D4AF37';
   const dark = theme?.mode === 'dark';
 
   const svgFallback = useMemo(

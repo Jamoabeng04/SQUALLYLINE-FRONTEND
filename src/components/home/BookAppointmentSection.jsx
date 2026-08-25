@@ -83,8 +83,8 @@ const BookAppointmentSection = () => {
     gap: '6px',
     padding: '4px 14px',
     borderRadius: '20px',
-    background: isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.05)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    background: isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.05)',
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     fontSize: '11px',
     fontWeight: 500,
     color: colors.primary,
@@ -129,7 +129,7 @@ const BookAppointmentSection = () => {
     padding: isMobile ? '16px 12px' : '20px 16px',
     borderRadius: '12px',
     background: isDark ? 'rgba(20,20,20,0.40)' : 'rgba(255,255,255,0.40)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     textAlign: 'center',
     cursor: 'pointer',
     transition: 'all 0.3s ease',
@@ -211,7 +211,7 @@ const BookAppointmentSection = () => {
     padding: '16px 24px',
     borderRadius: '12px',
     background: isDark ? 'rgba(20,20,20,0.30)' : 'rgba(255,255,255,0.30)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.04)' : 'rgba(168, 137, 79,0.06)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.04)' : 'rgba(212, 175, 55,0.06)'}`,
     maxWidth: '500px',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -292,7 +292,7 @@ const BookAppointmentSection = () => {
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
                 e.currentTarget.style.boxShadow = 'none';
-                e.currentTarget.style.borderColor = isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)';
+                e.currentTarget.style.borderColor = isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)';
               }}
             >
               <div style={typeIconStyle(type.color)}>
@@ -343,7 +343,7 @@ const BookAppointmentSection = () => {
           style={buttonStyle}
           onClick={() => navigate('/appointments/book')}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = isDark ? '#C9B183' : '#8A6F3A';
+            e.currentTarget.style.background = isDark ? '#F0D888' : '#927619';
             e.currentTarget.style.transform = 'scale(1.02)';
           }}
           onMouseLeave={(e) => {

@@ -114,8 +114,8 @@ const SocialSection = () => {
     gap: '6px',
     padding: '4px 14px',
     borderRadius: '20px',
-    background: isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.05)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    background: isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.05)',
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     fontSize: '11px',
     fontWeight: 500,
     color: colors.primary,
@@ -167,7 +167,7 @@ const SocialSection = () => {
     padding: isMobile ? '8px 12px' : '12px 16px',
     borderRadius: '12px',
     background: isDark ? 'rgba(20,20,20,0.40)' : 'rgba(255,255,255,0.40)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.04)' : 'rgba(168, 137, 79,0.06)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.04)' : 'rgba(212, 175, 55,0.06)'}`,
     minWidth: isMobile ? '60px' : '70px',
   };
 
@@ -243,7 +243,7 @@ const SocialSection = () => {
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.borderColor = isDark ? 'rgba(168, 137, 79,0.04)' : 'rgba(168, 137, 79,0.06)';
+              e.currentTarget.style.borderColor = isDark ? 'rgba(212, 175, 55,0.04)' : 'rgba(212, 175, 55,0.06)';
               e.currentTarget.style.boxShadow = 'none';
               const icon = e.currentTarget.querySelector('.social-icon');
               if (icon) {

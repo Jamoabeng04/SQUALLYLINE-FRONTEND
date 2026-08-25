@@ -178,8 +178,8 @@ const PromisesSection = () => {
     gap: '6px',
     padding: '4px 14px',
     borderRadius: '20px',
-    background: isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.05)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    background: isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.05)',
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     fontSize: '11px',
     fontWeight: 500,
     color: colors.primary,
@@ -255,7 +255,7 @@ const PromisesSection = () => {
     alignItems: 'center',
     justifyContent: 'center',
     background: isDark ? 'rgba(20,20,20,0.80)' : 'rgba(255,255,255,0.80)',
-    border: `2px solid ${isDark ? 'rgba(168, 137, 79,0.12)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `2px solid ${isDark ? 'rgba(212, 175, 55,0.12)' : 'rgba(212, 175, 55,0.15)'}`,
     position: 'relative',
     zIndex: 2,
     transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -271,7 +271,7 @@ const PromisesSection = () => {
   const connectorStyle = (index) => ({
     width: isMobile ? '16px' : '24px',
     height: '2px',
-    background: isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.20)',
+    background: isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212, 175, 55,0.20)',
     position: 'relative',
     zIndex: 1,
     transform: isVisible ? 'scaleX(1)' : 'scaleX(0)',
@@ -285,7 +285,7 @@ const PromisesSection = () => {
     position: 'absolute',
     inset: '-6px',
     borderRadius: '50%',
-    border: `2px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+    border: `2px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
     pointerEvents: 'none',
   };
 
@@ -326,7 +326,7 @@ const PromisesSection = () => {
     borderRadius: '50%',
     background: isDark ? 'rgba(20,20,20,0.85)' : 'rgba(255,255,255,0.85)',
     backdropFilter: 'blur(12px)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     cursor: 'pointer',
     display: 'flex',
     alignItems: 'center',
@@ -358,7 +358,7 @@ const PromisesSection = () => {
     width: active ? '28px' : '8px',
     height: '8px',
     borderRadius: '4px',
-    background: active ? colors.primary : (isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.20)'),
+    background: active ? colors.primary : (isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212, 175, 55,0.20)'),
     cursor: 'pointer',
     transition: 'all 0.3s ease',
   });
@@ -411,7 +411,7 @@ const PromisesSection = () => {
             style={arrowLeftStyle}
             onClick={scrollLeft}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.08)';
+              e.currentTarget.style.background = isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212, 175, 55,0.08)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.background = isDark ? 'rgba(20,20,20,0.85)' : 'rgba(255,255,255,0.85)';
@@ -427,7 +427,7 @@ const PromisesSection = () => {
             style={arrowRightStyle}
             onClick={scrollRight}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.08)';
+              e.currentTarget.style.background = isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212, 175, 55,0.08)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.background = isDark ? 'rgba(20,20,20,0.85)' : 'rgba(255,255,255,0.85)';
@@ -457,12 +457,12 @@ const PromisesSection = () => {
                       e.currentTarget.style.transform = 'scale(1.05)';
                       e.currentTarget.style.borderColor = colors.primary;
                       e.currentTarget.style.boxShadow = isDark 
-                        ? '0 8px 32px rgba(168, 137, 79,0.15)' 
-                        : '0 8px 32px rgba(168, 137, 79,0.12)';
+                        ? '0 8px 32px rgba(212, 175, 55,0.15)' 
+                        : '0 8px 32px rgba(212, 175, 55,0.12)';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.transform = 'scale(1)';
-                      e.currentTarget.style.borderColor = isDark ? 'rgba(168, 137, 79,0.12)' : 'rgba(168, 137, 79,0.15)';
+                      e.currentTarget.style.borderColor = isDark ? 'rgba(212, 175, 55,0.12)' : 'rgba(212, 175, 55,0.15)';
                       e.currentTarget.style.boxShadow = isDark 
                         ? '0 4px 20px rgba(0,0,0,0.20)' 
                         : '0 4px 20px rgba(0,0,0,0.04)';

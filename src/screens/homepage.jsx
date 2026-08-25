@@ -113,14 +113,14 @@ const HomePage = () => {
     const hasHalfStar = rating % 1 >= 0.5;
 
     for (let i = 0; i < fullStars; i += 1) {
-      stars.push(<Star key={i} size={14} fill="#A8894F" color="#A8894F" />);
+      stars.push(<Star key={i} size={14} fill="#D4AF37" color="#D4AF37" />);
     }
     if (hasHalfStar) {
-      stars.push(<StarHalf key="half" size={14} fill="#A8894F" color="#A8894F" />);
+      stars.push(<StarHalf key="half" size={14} fill="#D4AF37" color="#D4AF37" />);
     }
     const remaining = 5 - stars.length;
     for (let i = 0; i < remaining; i += 1) {
-      stars.push(<Star key={`empty-${i}`} size={14} color="rgba(168, 137, 79,0.20)" />);
+      stars.push(<Star key={`empty-${i}`} size={14} color="rgba(212, 175, 55,0.20)" />);
     }
     return stars;
   };
@@ -187,7 +187,7 @@ const HomePage = () => {
   const categoryFullCardStyle = {
     borderRadius: '14px',
     background: isDark ? 'rgba(20,20,20,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     overflow: 'hidden',
     cursor: 'pointer',
     transition: 'all 0.3s ease',
@@ -198,7 +198,7 @@ const HomePage = () => {
     alignItems: 'center',
     padding: isMobile ? '12px 14px' : '14px 16px',
     gap: isMobile ? '12px' : '16px',
-    borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
   };
 
   const categoryImageStyle = {
@@ -207,7 +207,7 @@ const HomePage = () => {
     borderRadius: '50%',
     objectFit: 'cover',
     flexShrink: 0,
-    border: `2px solid ${isDark ? 'rgba(168, 137, 79,0.12)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `2px solid ${isDark ? 'rgba(212, 175, 55,0.12)' : 'rgba(212, 175, 55,0.15)'}`,
   };
 
   const categoryInfoStyle = {
@@ -256,7 +256,7 @@ const HomePage = () => {
     height: isMobile ? '68px' : '80px',
     borderRadius: '12px',
     objectFit: 'cover',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
     transition: 'transform 0.3s ease',
     display: 'block',
     margin: '0 auto',
@@ -301,7 +301,7 @@ const HomePage = () => {
     width: active ? '28px' : '8px',
     height: '8px',
     borderRadius: '4px',
-    background: active ? colors.primary : isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.20)',
+    background: active ? colors.primary : isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212, 175, 55,0.20)',
     cursor: 'pointer',
     transition: 'all 0.3s ease',
     border: 'none',
@@ -333,7 +333,7 @@ const HomePage = () => {
     padding: isMobile ? '24px' : '32px',
     borderRadius: '16px',
     background: isDark ? 'rgba(20,20,20,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     textAlign: 'center',
   };
 
@@ -366,7 +366,7 @@ const HomePage = () => {
     width: '8px',
     height: '8px',
     borderRadius: '50%',
-    background: active ? colors.primary : isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.20)',
+    background: active ? colors.primary : isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212, 175, 55,0.20)',
     cursor: 'pointer',
     transition: 'all 0.2s ease',
     border: 'none',

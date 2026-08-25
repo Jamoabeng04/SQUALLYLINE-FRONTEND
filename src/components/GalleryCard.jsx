@@ -120,7 +120,7 @@
 //   //     ty: 24,
 //   //     onClick: handleLike,
 //   //     getColor: () => isLiked ? '#1A1A1A' : 'rgba(248,246,241,0.90)',
-//   //     getBg: () => isLiked ? 'rgba(168, 137, 79,0.92)' : 'rgba(15,15,15,0.82)',
+//   //     getBg: () => isLiked ? 'rgba(212, 175, 55,0.92)' : 'rgba(15,15,15,0.82)',
 //   //   },
 //   //   { 
 //   //     id: 'bookmark', 
@@ -130,7 +130,7 @@
 //   //     ty: 46,
 //   //     onClick: handleBookmark,
 //   //     getColor: () => isBookmarked ? '#1A1A1A' : 'rgba(248,246,241,0.90)',
-//   //     getBg: () => isBookmarked ? 'rgba(168, 137, 79,0.92)' : 'rgba(15,15,15,0.82)',
+//   //     getBg: () => isBookmarked ? 'rgba(212, 175, 55,0.92)' : 'rgba(15,15,15,0.82)',
 //   //   },
 //   //   { 
 //   //     id: 'share', 
@@ -164,7 +164,7 @@
 //       ty: 32,   // Changed from 24
 //       onClick: handleLike,
 //       getColor: () => isLiked ? '#1A1A1A' : 'rgba(248,246,241,0.90)',
-//       getBg: () => isLiked ? 'rgba(168, 137, 79,0.92)' : 'rgba(15,15,15,0.82)',
+//       getBg: () => isLiked ? 'rgba(212, 175, 55,0.92)' : 'rgba(15,15,15,0.82)',
 //     },
 //     {
 //       id: 'bookmark',
@@ -174,7 +174,7 @@
 //       ty: 62,   // Changed from 46
 //       onClick: handleBookmark,
 //       getColor: () => isBookmarked ? '#1A1A1A' : 'rgba(248,246,241,0.90)',
-//       getBg: () => isBookmarked ? 'rgba(168, 137, 79,0.92)' : 'rgba(15,15,15,0.82)',
+//       getBg: () => isBookmarked ? 'rgba(212, 175, 55,0.92)' : 'rgba(15,15,15,0.82)',
 //     },
 //     {
 //       id: 'share',
@@ -224,7 +224,7 @@
 //     alignItems: 'center',
 //     justifyContent: 'center',
 //     cursor: 'pointer',
-//     border: '1px solid rgba(168, 137, 79,0.35)',
+//     border: '1px solid rgba(212, 175, 55,0.35)',
 //     backdropFilter: 'blur(12px)',
 //     WebkitBackdropFilter: 'blur(12px)',
 //     zIndex: 9,
@@ -323,12 +323,12 @@
 //     height: '32px',
 //     borderRadius: '50%',
 //     background: menuOpen
-//       ? 'rgba(168, 137, 79,0.90)'
+//       ? 'rgba(212, 175, 55,0.90)'
 //       : 'rgba(10,10,10,0.52)',
 //     backdropFilter: 'blur(10px)',
 //     WebkitBackdropFilter: 'blur(10px)',
 //     border: `1px solid ${menuOpen
-//       ? 'rgba(168, 137, 79,0.60)'
+//       ? 'rgba(212, 175, 55,0.60)'
 //       : 'rgba(255,255,255,0.08)'
 //       }`,
 //     display: 'flex',
@@ -384,12 +384,12 @@
 //   const tagStyle = {
 //     padding: '3px 8px',
 //     borderRadius: '10px',
-//     background: 'rgba(168, 137, 79,0.20)',
+//     background: 'rgba(212, 175, 55,0.20)',
 //     backdropFilter: 'blur(8px)',
-//     border: '1px solid rgba(168, 137, 79,0.30)',
+//     border: '1px solid rgba(212, 175, 55,0.30)',
 //     fontSize: '9px',
 //     fontWeight: 600,
-//     color: 'rgba(168, 137, 79,0.95)',
+//     color: 'rgba(212, 175, 55,0.95)',
 //     letterSpacing: '0.3px',
 //     textTransform: 'uppercase',
 //   };
@@ -457,7 +457,7 @@
 //         <div style={interestPillStyle}>
 //           <Flame
 //             size={11}
-//             color={isLiked ? '#A8894F' : 'rgba(248,246,241,0.70)'}
+//             color={isLiked ? '#D4AF37' : 'rgba(248,246,241,0.70)'}
 //           />
 //           <span style={{
 //             fontSize: '11px',
@@ -678,7 +678,7 @@ const GalleryCard = ({ item, onNavigate, onAction }) => {
       ty: 32,
       onClick: handleLike,
       getColor: () => isLiked ? '#1A1A1A' : 'rgba(248,246,241,0.90)',
-      getBg: () => isLiked ? 'rgba(168, 137, 79,0.92)' : 'rgba(15,15,15,0.82)',
+      getBg: () => isLiked ? 'rgba(212, 175, 55,0.92)' : 'rgba(15,15,15,0.82)',
     },
     {
       id: 'bookmark',
@@ -688,7 +688,7 @@ const GalleryCard = ({ item, onNavigate, onAction }) => {
       ty: 62,
       onClick: handleBookmark,
       getColor: () => isBookmarked ? '#1A1A1A' : 'rgba(248,246,241,0.90)',
-      getBg: () => isBookmarked ? 'rgba(168, 137, 79,0.92)' : 'rgba(15,15,15,0.82)',
+      getBg: () => isBookmarked ? 'rgba(212, 175, 55,0.92)' : 'rgba(15,15,15,0.82)',
     },
     {
       id: 'share',
@@ -738,7 +738,7 @@ const GalleryCard = ({ item, onNavigate, onAction }) => {
     alignItems: 'center',
     justifyContent: 'center',
     cursor: 'pointer',
-    border: '1px solid rgba(168, 137, 79,0.35)',
+    border: '1px solid rgba(212, 175, 55,0.35)',
     backdropFilter: 'blur(12px)',
     WebkitBackdropFilter: 'blur(12px)',
     zIndex: 9,
@@ -833,12 +833,12 @@ const GalleryCard = ({ item, onNavigate, onAction }) => {
     height: '32px',
     borderRadius: '50%',
     background: menuOpen
-      ? 'rgba(168, 137, 79,0.90)'
+      ? 'rgba(212, 175, 55,0.90)'
       : 'rgba(10,10,10,0.52)',
     backdropFilter: 'blur(10px)',
     WebkitBackdropFilter: 'blur(10px)',
     border: `1px solid ${menuOpen
-      ? 'rgba(168, 137, 79,0.60)'
+      ? 'rgba(212, 175, 55,0.60)'
       : 'rgba(255,255,255,0.08)'
       }`,
     display: 'flex',
@@ -894,12 +894,12 @@ const GalleryCard = ({ item, onNavigate, onAction }) => {
   const tagStyle = {
     padding: '3px 8px',
     borderRadius: '10px',
-    background: 'rgba(168, 137, 79,0.20)',
+    background: 'rgba(212, 175, 55,0.20)',
     backdropFilter: 'blur(8px)',
-    border: '1px solid rgba(168, 137, 79,0.30)',
+    border: '1px solid rgba(212, 175, 55,0.30)',
     fontSize: '9px',
     fontWeight: 600,
-    color: 'rgba(168, 137, 79,0.95)',
+    color: 'rgba(212, 175, 55,0.95)',
     letterSpacing: '0.3px',
     textTransform: 'uppercase',
   };
@@ -967,7 +967,7 @@ const GalleryCard = ({ item, onNavigate, onAction }) => {
         <div style={interestPillStyle}>
           <Flame
             size={11}
-            color={isLiked ? '#A8894F' : 'rgba(248,246,241,0.70)'}
+            color={isLiked ? '#D4AF37' : 'rgba(248,246,241,0.70)'}
           />
           <span style={{
             fontSize: '11px',

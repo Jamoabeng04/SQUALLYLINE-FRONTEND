@@ -211,7 +211,7 @@ const CartPage = () => {
     padding: isMobile ? '6px 12px' : '8px 16px',
     borderRadius: '10px',
     background: 'transparent',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.20)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212, 175, 55,0.20)'}`,
     cursor: 'pointer',
     color: colors.secondaryText,
     fontSize: isMobile ? '11px' : '12px',
@@ -235,7 +235,7 @@ const CartPage = () => {
     marginBottom: '16px',
     borderRadius: '14px',
     background: isDark ? 'rgba(20,20,20,0.40)' : 'rgba(255,255,255,0.40)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     overflow: 'hidden',
   };
 
@@ -244,7 +244,7 @@ const CartPage = () => {
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: isMobile ? '10px 14px' : '14px 16px',
-    borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     flexWrap: 'wrap',
     gap: '6px',
   };
@@ -265,7 +265,7 @@ const CartPage = () => {
     alignItems: 'flex-start',
     padding: isMobile ? '10px 12px' : '12px 16px',
     gap: isMobile ? '10px' : '14px',
-    borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.04)' : 'rgba(168, 137, 79,0.06)'}`,
+    borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.04)' : 'rgba(212, 175, 55,0.06)'}`,
     opacity: busy ? 0.5 : 1,
     pointerEvents: busy ? 'none' : 'auto',
     transition: 'opacity 0.2s ease',
@@ -393,7 +393,7 @@ const CartPage = () => {
     padding: isMobile ? '14px' : '16px',
     borderRadius: '14px',
     background: isDark ? 'rgba(20,20,20,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
     position: isMobile ? 'static' : 'sticky',
     top: '16px',
   };
@@ -635,8 +635,8 @@ const CartPage = () => {
               onClick={() => navigate('/products')}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = isDark
-                  ? 'rgba(168, 137, 79,0.08)'
-                  : 'rgba(168, 137, 79,0.04)';
+                  ? 'rgba(212, 175, 55,0.08)'
+                  : 'rgba(212, 175, 55,0.04)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = 'transparent';
@@ -790,7 +790,7 @@ const CartPage = () => {
 
               <div
                 style={{
-                  borderTop: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.12)'}`,
+                  borderTop: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.12)'}`,
                   paddingTop: '10px',
                   marginTop: '6px',
                 }}
@@ -807,7 +807,7 @@ const CartPage = () => {
                 disabled={items.length === 0}
                 onMouseEnter={(e) => {
                   if (items.length === 0) return;
-                  e.currentTarget.style.background = isDark ? '#C9B183' : '#8A6F3A';
+                  e.currentTarget.style.background = isDark ? '#F0D888' : '#927619';
                 }}
                 onMouseLeave={(e) => {
                   if (items.length === 0) return;

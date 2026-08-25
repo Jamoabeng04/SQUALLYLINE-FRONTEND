@@ -248,7 +248,7 @@ const SavedStylesPage = () => {
     padding: '10px 40px',
     borderRadius: '12px',
     background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.80)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     color: colors.text,
     fontSize: '13px',
     outline: 'none',
@@ -273,7 +273,7 @@ const SavedStylesPage = () => {
     cursor: 'pointer',
     background: active ? colors.primary : isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.80)',
     color: active ? '#1A1A1A' : colors.secondaryText,
-    border: `1px solid ${active ? colors.primary : isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `1px solid ${active ? colors.primary : isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     transition: 'all 0.2s ease',
     whiteSpace: 'nowrap',
     display: 'flex',
@@ -287,7 +287,7 @@ const SavedStylesPage = () => {
     background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.80)',
     borderRadius: '8px',
     padding: '4px',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
   };
 
   const viewButtonStyle = (active) => ({
@@ -316,7 +316,7 @@ const SavedStylesPage = () => {
     borderRadius: '14px',
     overflow: 'hidden',
     background: isDark ? 'rgba(20,20,20,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     transition: 'all 0.3s ease',
     display: viewMode === 'list' ? 'flex' : 'block',
     alignItems: 'center',
@@ -354,7 +354,7 @@ const SavedStylesPage = () => {
     fontSize: '10px',
     fontWeight: 500,
     background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.80)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     color: colors.text,
     cursor: 'pointer',
     display: 'flex',
@@ -381,7 +381,7 @@ const SavedStylesPage = () => {
     padding: isMobile ? '40px 20px' : '64px 24px',
     borderRadius: '16px',
     background: isDark ? 'rgba(20,20,20,0.40)' : 'rgba(255,255,255,0.40)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.04)' : 'rgba(168, 137, 79,0.06)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.04)' : 'rgba(212, 175, 55,0.06)'}`,
     textAlign: 'center',
   };
 
@@ -599,7 +599,7 @@ const SavedStylesPage = () => {
                         e.currentTarget.style.color = '#EF4444';
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.borderColor = isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)';
+                        e.currentTarget.style.borderColor = isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)';
                         e.currentTarget.style.color = colors.text;
                       }}
                     >

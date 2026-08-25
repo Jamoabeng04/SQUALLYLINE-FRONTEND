@@ -248,7 +248,7 @@ const CategoryDetailsPage = () => {
 
     const headerStyle = {
         padding: '16px 20px 12px',
-        borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.12)'}`,
+        borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.12)'}`,
         backgroundColor: isDark ? 'rgba(10,10,10,0.60)' : 'rgba(248,246,241,0.60)',
         backdropFilter: 'blur(20px)',
         WebkitBackdropFilter: 'blur(20px)',
@@ -278,7 +278,7 @@ const CategoryDetailsPage = () => {
         height: '36px',
         borderRadius: '50%',
         background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.60)',
-        border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+        border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
         cursor: 'pointer',
         color: colors.text,
         transition: 'all 0.2s ease',
@@ -304,7 +304,7 @@ const CategoryDetailsPage = () => {
         padding: '6px 12px',
         borderRadius: '20px',
         background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.60)',
-        border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+        border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
         cursor: 'pointer',
         color: colors.secondaryText,
         fontSize: '12px',
@@ -322,7 +322,7 @@ const CategoryDetailsPage = () => {
         overflowY: 'auto',
         background: isDark ? 'rgba(20,20,20,0.95)' : 'rgba(255,255,255,0.95)',
         backdropFilter: 'blur(20px)',
-        border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+        border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
         borderRadius: '12px',
         padding: '6px',
         boxShadow: isDark ? '0 12px 40px rgba(0,0,0,0.40)' : '0 12px 40px rgba(0,0,0,0.08)',
@@ -337,7 +337,7 @@ const CategoryDetailsPage = () => {
         fontSize: '13px',
         fontWeight: active ? 600 : 400,
         color: active ? colors.primary : colors.text,
-        background: active ? (isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.06)') : 'transparent',
+        background: active ? (isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.06)') : 'transparent',
         transition: 'all 0.2s ease',
         display: 'flex',
         alignItems: 'center',
@@ -356,7 +356,7 @@ const CategoryDetailsPage = () => {
         background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.60)',
         borderRadius: '8px',
         padding: '4px',
-        border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+        border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     };
 
     const viewButtonStyle = (active) => ({
@@ -383,7 +383,7 @@ const CategoryDetailsPage = () => {
         padding: '10px 40px',
         borderRadius: '12px',
         background: isDark ? 'rgba(26,26,26,0.80)' : 'rgba(255,255,255,0.80)',
-        border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+        border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
         fontSize: '13px',
         color: colors.text,
         outline: 'none',
@@ -406,7 +406,7 @@ const CategoryDetailsPage = () => {
         padding: '6px 14px',
         borderRadius: '20px',
         background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.60)',
-        border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+        border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
         fontSize: '12px',
         color: colors.text,
         cursor: 'pointer',
@@ -425,7 +425,7 @@ const CategoryDetailsPage = () => {
         padding: '16px 20px',
         background: isDark ? 'rgba(20,20,20,0.90)' : 'rgba(255,255,255,0.90)',
         backdropFilter: 'blur(20px)',
-        borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.12)'}`,
+        borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.12)'}`,
         display: showFilters ? 'block' : 'none',
     };
 
@@ -458,7 +458,7 @@ const CategoryDetailsPage = () => {
         transition: 'all 0.2s ease',
         background: active ? colors.primary : isDark ? 'rgba(26,26,26,0.60)' : 'rgba(248,246,241,0.60)',
         color: active ? '#1A1A1A' : colors.secondaryText,
-        border: `1px solid ${active ? colors.primary : isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+        border: `1px solid ${active ? colors.primary : isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
         fontFamily: 'inherit',
     });
 
@@ -479,7 +479,7 @@ const CategoryDetailsPage = () => {
         gap: '8px',
         padding: '12px 16px',
         overflowX: 'auto',
-        borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+        borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
         scrollbarWidth: 'none',
         msOverflowStyle: 'none',
     };
@@ -491,7 +491,7 @@ const CategoryDetailsPage = () => {
         fontWeight: active ? 600 : 400,
         color: active ? '#1A1A1A' : colors.secondaryText,
         background: active ? colors.primary : 'transparent',
-        border: `1px solid ${active ? colors.primary : isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+        border: `1px solid ${active ? colors.primary : isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
         cursor: 'pointer',
         whiteSpace: 'nowrap',
         transition: 'all 0.2s ease',
@@ -567,8 +567,8 @@ const CategoryDetailsPage = () => {
                             onClick={() => navigate('/categories')}
                             onMouseEnter={(e) => {
                                 e.currentTarget.style.background = isDark
-                                    ? 'rgba(168, 137, 79,0.10)'
-                                    : 'rgba(168, 137, 79,0.06)';
+                                    ? 'rgba(212, 175, 55,0.10)'
+                                    : 'rgba(212, 175, 55,0.06)';
                             }}
                             onMouseLeave={(e) => {
                                 e.currentTarget.style.background = isDark
@@ -642,13 +642,13 @@ const CategoryDetailsPage = () => {
                         value={searchDraft}
                         onChange={(e) => setSearchDraft(e.target.value)}
                         onFocus={(e) => {
-                            e.currentTarget.style.borderColor = 'rgba(168, 137, 79,0.50)';
-                            e.currentTarget.style.boxShadow = '0 0 0 3px rgba(168, 137, 79,0.08)';
+                            e.currentTarget.style.borderColor = 'rgba(212, 175, 55,0.50)';
+                            e.currentTarget.style.boxShadow = '0 0 0 3px rgba(212, 175, 55,0.08)';
                         }}
                         onBlur={(e) => {
                             e.currentTarget.style.borderColor = isDark
-                                ? 'rgba(168, 137, 79,0.10)'
-                                : 'rgba(168, 137, 79,0.15)';
+                                ? 'rgba(212, 175, 55,0.10)'
+                                : 'rgba(212, 175, 55,0.15)';
                             e.currentTarget.style.boxShadow = 'none';
                         }}
                     />

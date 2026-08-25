@@ -231,7 +231,7 @@ const GalleryPage = () => {
     background: isDark ? 'rgba(10,10,10,0.85)' : 'rgba(248,246,241,0.88)',
     backdropFilter: 'blur(20px) saturate(180%)',
     WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-    borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     padding: '12px 16px',
   };
 
@@ -246,7 +246,7 @@ const GalleryPage = () => {
     padding: '10px 16px 10px 40px',
     borderRadius: '24px',
     background: isDark ? 'rgba(26,26,26,0.90)' : 'rgba(255,255,255,0.90)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.25)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212, 175, 55,0.25)'}`,
     fontSize: '13px',
     color: colors.text,
     outline: 'none',
@@ -274,13 +274,13 @@ const GalleryPage = () => {
     transition: 'all 0.2s ease',
     whiteSpace: 'nowrap',
     fontFamily: 'inherit',
-    background: isActive ? '#A8894F' : isDark ? 'rgba(26,26,26,0.80)' : 'rgba(255,255,255,0.80)',
+    background: isActive ? '#D4AF37' : isDark ? 'rgba(26,26,26,0.80)' : 'rgba(255,255,255,0.80)',
     color: isActive ? '#1A1A1A' : colors.secondaryText,
     border: isActive
-      ? '1px solid #A8894F'
+      ? '1px solid #D4AF37'
       : isDark
-        ? '1px solid rgba(168, 137, 79,0.12)'
-        : '1px solid rgba(168, 137, 79,0.20)',
+        ? '1px solid rgba(212, 175, 55,0.12)'
+        : '1px solid rgba(212,175,55,0.22)',
   });
 
   const pageHeadingStyle = {
@@ -306,7 +306,7 @@ const GalleryPage = () => {
 
   const layoutToggleStyle = {
     background: isDark ? 'rgba(26,26,26,0.80)' : 'rgba(255,255,255,0.80)',
-    border: isDark ? '1px solid rgba(168, 137, 79,0.12)' : '1px solid #E5E0D6',
+    border: isDark ? '1px solid rgba(212, 175, 55,0.12)' : '1px solid #EBEAE4',
     borderRadius: '10px',
     padding: '4px',
     display: 'flex',
@@ -321,7 +321,7 @@ const GalleryPage = () => {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    background: isActive ? '#A8894F' : 'transparent',
+    background: isActive ? '#D4AF37' : 'transparent',
     color: isActive ? '#1A1A1A' : colors.secondaryText,
     border: 'none',
   });
@@ -352,8 +352,8 @@ const GalleryPage = () => {
   const spinnerCircleStyle = {
     width: '24px',
     height: '24px',
-    border: '2px solid rgba(168, 137, 79,0.20)',
-    borderTop: '2px solid #A8894F',
+    border: '2px solid rgba(212,175,55,0.22)',
+    borderTop: '2px solid #D4AF37',
     borderRadius: '50%',
     animation: 'spin 0.8s linear infinite',
   };
@@ -365,7 +365,7 @@ const GalleryPage = () => {
 
   const endLineStyle = {
     height: '0.5px',
-    background: '#A8894F',
+    background: '#D4AF37',
     opacity: 0.3,
     margin: '0 auto 16px',
     width: '40px',
@@ -525,13 +525,13 @@ const GalleryPage = () => {
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
             onFocus={(e) => {
-              e.currentTarget.style.borderColor = 'rgba(168, 137, 79,0.60)';
-              e.currentTarget.style.boxShadow = '0 0 0 3px rgba(168, 137, 79,0.10)';
+              e.currentTarget.style.borderColor = 'rgba(212, 175, 55,0.60)';
+              e.currentTarget.style.boxShadow = '0 0 0 3px rgba(212, 175, 55,0.10)';
             }}
             onBlur={(e) => {
               e.currentTarget.style.borderColor = isDark
-                ? 'rgba(168, 137, 79,0.15)'
-                : 'rgba(168, 137, 79,0.25)';
+                ? 'rgba(212, 175, 55,0.15)'
+                : 'rgba(212, 175, 55,0.25)';
               e.currentTarget.style.boxShadow = 'none';
             }}
           />
@@ -564,15 +564,15 @@ const GalleryPage = () => {
                 onClick={() => setActiveChip(chip.key)}
                 onMouseEnter={(e) => {
                   if (activeChip !== chip.key) {
-                    e.currentTarget.style.borderColor = 'rgba(168, 137, 79,0.45)';
+                    e.currentTarget.style.borderColor = 'rgba(212, 175, 55,0.45)';
                     e.currentTarget.style.color = colors.text;
                   }
                 }}
                 onMouseLeave={(e) => {
                   if (activeChip !== chip.key) {
                     e.currentTarget.style.borderColor = isDark
-                      ? 'rgba(168, 137, 79,0.12)'
-                      : 'rgba(168, 137, 79,0.20)';
+                      ? 'rgba(212, 175, 55,0.12)'
+                      : 'rgba(212,175,55,0.22)';
                     e.currentTarget.style.color = colors.secondaryText;
                   }
                 }}

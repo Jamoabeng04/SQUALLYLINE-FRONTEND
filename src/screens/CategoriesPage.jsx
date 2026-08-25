@@ -80,7 +80,7 @@ const CategoriesPage = () => {
 
     const headerStyle = {
         padding: '20px 20px 16px',
-        borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.12)'}`,
+        borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.12)'}`,
         backgroundColor: isDark ? 'rgba(10,10,10,0.60)' : 'rgba(248,246,241,0.60)',
         backdropFilter: 'blur(20px)',
         WebkitBackdropFilter: 'blur(20px)',
@@ -116,7 +116,7 @@ const CategoriesPage = () => {
         background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.60)',
         borderRadius: '8px',
         padding: '4px',
-        border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+        border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     };
 
     const viewButtonStyle = (active) => ({
@@ -143,7 +143,7 @@ const CategoriesPage = () => {
         padding: '10px 16px 10px 40px',
         borderRadius: '12px',
         background: isDark ? 'rgba(26,26,26,0.80)' : 'rgba(255,255,255,0.80)',
-        border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+        border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
         fontSize: '13px',
         color: colors.text,
         outline: 'none',
@@ -159,7 +159,7 @@ const CategoriesPage = () => {
         marginBottom: '24px',
         borderRadius: '16px',
         background: isDark ? 'rgba(20,20,20,0.80)' : 'rgba(255,255,255,0.80)',
-        border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.12)'}`,
+        border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.12)'}`,
         overflow: 'hidden',
         transition: 'all 0.3s ease',
     };
@@ -179,7 +179,7 @@ const CategoriesPage = () => {
         borderRadius: '50%',
         objectFit: 'cover',
         flexShrink: 0,
-        border: `2px solid ${isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.20)'}`,
+        border: `2px solid ${isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212, 175, 55,0.20)'}`,
     };
 
     const categoryInfoStyle = {
@@ -208,7 +208,7 @@ const CategoriesPage = () => {
         cursor: 'pointer',
         padding: '4px 12px',
         borderRadius: '12px',
-        border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.20)' : 'rgba(168, 137, 79,0.25)'}`,
+        border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.20)' : 'rgba(212, 175, 55,0.25)'}`,
         background: 'transparent',
         transition: 'all 0.2s ease',
         display: 'flex',
@@ -249,7 +249,7 @@ const CategoriesPage = () => {
         height: '100px',
         borderRadius: '14px',
         objectFit: 'cover',
-        border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+        border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
         transition: 'transform 0.3s ease',
     };
 
@@ -277,7 +277,7 @@ const CategoriesPage = () => {
         borderRadius: '10px',
         fontSize: '9px',
         fontWeight: 600,
-        background: 'rgba(168, 137, 79,0.90)',
+        background: 'rgba(212, 175, 55,0.90)',
         color: '#1A1A1A',
         letterSpacing: '0.2px',
     };
@@ -346,7 +346,7 @@ const CategoriesPage = () => {
                     style={categoryHeaderStyle}
                     onClick={() => handleCategoryPress(category.slug)}
                     onMouseEnter={(e) => {
-                        e.currentTarget.style.background = 'rgba(168, 137, 79,0.04)';
+                        e.currentTarget.style.background = 'rgba(212, 175, 55,0.04)';
                     }}
                     onMouseLeave={(e) => {
                         e.currentTarget.style.background = 'transparent';
@@ -466,13 +466,13 @@ const CategoriesPage = () => {
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         onFocus={(e) => {
-                            e.currentTarget.style.borderColor = 'rgba(168, 137, 79,0.50)';
-                            e.currentTarget.style.boxShadow = '0 0 0 3px rgba(168, 137, 79,0.08)';
+                            e.currentTarget.style.borderColor = 'rgba(212, 175, 55,0.50)';
+                            e.currentTarget.style.boxShadow = '0 0 0 3px rgba(212, 175, 55,0.08)';
                         }}
                         onBlur={(e) => {
                             e.currentTarget.style.borderColor = isDark
-                                ? 'rgba(168, 137, 79,0.10)'
-                                : 'rgba(168, 137, 79,0.15)';
+                                ? 'rgba(212, 175, 55,0.10)'
+                                : 'rgba(212, 175, 55,0.15)';
                             e.currentTarget.style.boxShadow = 'none';
                         }}
                     />

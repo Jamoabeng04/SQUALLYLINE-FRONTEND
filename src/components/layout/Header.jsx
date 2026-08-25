@@ -58,8 +58,8 @@
 //     justifyContent: 'space-between',
 //     backgroundColor: colors.glassNavBg || 'rgba(255, 255, 255, 0.72)',
 //     backdropFilter: colors.glassNavBlur || 'blur(20px) saturate(160%)',
-//     borderBottom: `1px solid ${colors.glassNavBorder || 'rgba(168, 137, 79, 0.22)'}`,
-//     boxShadow: colors.glassNavShadow || '0 1px 0 rgba(168, 137, 79, 0.10)',
+//     borderBottom: `1px solid ${colors.glassNavBorder || 'rgba(212, 175, 55, 0.22)'}`,
+//     boxShadow: colors.glassNavShadow || '0 1px 0 rgba(212, 175, 55, 0.10)',
 //     flexShrink: 0,
 //     zIndex: 10,
 //     position: 'relative',
@@ -296,8 +296,8 @@ const Header = ({ toggleSidebar, isMobile, sidebarOpen }) => {
       ? "0 20px 60px rgba(0,0,0,0.5)"
       : "0 20px 60px rgba(0,0,0,0.06)",
     tabActiveBg: isDark
-      ? "rgba(168, 137, 79, 0.10)"
-      : "rgba(168, 137, 79, 0.06)",
+      ? "rgba(212, 175, 55, 0.10)"
+      : "rgba(212, 175, 55, 0.06)",
   };
 
   // Close dropdown on outside click

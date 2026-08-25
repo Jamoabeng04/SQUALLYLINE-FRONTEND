@@ -245,7 +245,7 @@ const AppointmentDetailsPage = () => {
     padding: '8px 16px',
     borderRadius: '10px',
     background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     cursor: 'pointer',
     color: colors.text,
     fontSize: '13px',
@@ -256,7 +256,7 @@ const AppointmentDetailsPage = () => {
   const cardStyle = {
     borderRadius: '12px',
     background: isDark ? 'rgba(20,20,20,0.50)' : 'rgba(255,255,255,0.50)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     overflow: 'hidden',
     marginBottom: '14px',
   };
@@ -280,7 +280,7 @@ const AppointmentDetailsPage = () => {
     padding: '9px 18px',
     borderRadius: '10px',
     background: 'transparent',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.20)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212, 175, 55,0.20)'}`,
     color: colors.text,
     cursor: 'pointer',
     fontSize: '12px',
@@ -326,7 +326,7 @@ const AppointmentDetailsPage = () => {
     justifyContent: 'space-between',
     gap: '12px',
     padding: '7px 0',
-    borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.04)' : 'rgba(168, 137, 79,0.06)'}`,
+    borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.04)' : 'rgba(212, 175, 55,0.06)'}`,
   };
 
   const detailLabelStyle = { fontSize: '12px', color: colors.secondaryText, flexShrink: 0 };
@@ -344,7 +344,7 @@ const AppointmentDetailsPage = () => {
     padding: '7px 10px',
     borderRadius: '8px',
     background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.80)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     color: colors.text,
     fontSize: '12px',
     outline: 'none',
@@ -366,7 +366,7 @@ const AppointmentDetailsPage = () => {
     padding: '12px 14px',
     borderRadius: '10px',
     background: isDark ? 'rgba(20,20,20,0.50)' : 'rgba(255,255,255,0.50)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
   };
 
   const statLabelStyle = {
@@ -381,7 +381,7 @@ const AppointmentDetailsPage = () => {
   const tabsStyle = {
     display: 'flex',
     gap: '16px',
-    borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+    borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
     paddingBottom: '8px',
     marginBottom: '18px',
     overflowX: 'auto',
@@ -917,7 +917,7 @@ const AppointmentDetailsPage = () => {
                         flexWrap: 'wrap',
                         paddingBottom: '12px',
                         marginBottom: '12px',
-                        borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+                        borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
                       }}
                     >
                       <span style={{ fontSize: '12px', color: colors.text, display: 'flex', alignItems: 'center', gap: '5px' }}>
@@ -1024,7 +1024,7 @@ const AppointmentDetailsPage = () => {
                     marginLeft: '10px',
                     paddingBottom: index === timeline.length - 1 ? 0 : '16px',
                     borderLeft: `2px solid ${
-                      index === timeline.length - 1 ? 'transparent' : isDark ? 'rgba(168, 137, 79,0.20)' : 'rgba(168, 137, 79,0.25)'
+                      index === timeline.length - 1 ? 'transparent' : isDark ? 'rgba(212, 175, 55,0.20)' : 'rgba(212, 175, 55,0.25)'
                     }`,
                     position: 'relative',
                   }}
@@ -1085,7 +1085,7 @@ const AppointmentDetailsPage = () => {
               background: isDark ? 'rgba(20,20,20,0.97)' : 'rgba(255,255,255,0.97)',
               borderRadius: '16px',
               padding: '26px 24px',
-              border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.12)' : 'rgba(168, 137, 79,0.18)'}`,
+              border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.12)' : 'rgba(212, 175, 55,0.18)'}`,
             }}
             onClick={(e) => e.stopPropagation()}
           >

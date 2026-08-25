@@ -202,7 +202,7 @@ const CheckoutPage = () => {
     padding: isMobile ? '14px' : '18px',
     borderRadius: '14px',
     background: isDark ? 'rgba(20,20,20,0.40)' : 'rgba(255,255,255,0.40)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     marginBottom: '16px',
   };
 
@@ -237,7 +237,7 @@ const CheckoutPage = () => {
     padding: isMobile ? '10px 12px' : '11px 14px',
     borderRadius: '10px',
     background: isDark ? 'rgba(10,10,10,0.40)' : 'rgba(255,255,255,0.70)',
-    border: `1px solid ${invalid ? 'rgba(239,68,68,0.60)' : isDark ? 'rgba(168, 137, 79,0.12)' : 'rgba(168, 137, 79,0.18)'}`,
+    border: `1px solid ${invalid ? 'rgba(239,68,68,0.60)' : isDark ? 'rgba(212, 175, 55,0.12)' : 'rgba(212, 175, 55,0.18)'}`,
     color: colors.text,
     fontSize: isMobile ? '13px' : '14px',
     fontFamily: 'inherit',
@@ -266,7 +266,7 @@ const CheckoutPage = () => {
     padding: isMobile ? '14px' : '16px',
     borderRadius: '14px',
     background: isDark ? 'rgba(20,20,20,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
     position: isMobile ? 'static' : 'sticky',
     top: '16px',
   };
@@ -276,7 +276,7 @@ const CheckoutPage = () => {
     alignItems: 'center',
     gap: '8px',
     padding: '6px 0',
-    borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.04)' : 'rgba(168, 137, 79,0.06)'}`,
+    borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.04)' : 'rgba(212, 175, 55,0.06)'}`,
   };
 
   const lineNameStyle = {
@@ -548,7 +548,7 @@ const CheckoutPage = () => {
                   </div>
                   <div
                     style={{
-                      borderTop: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.12)'}`,
+                      borderTop: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.12)'}`,
                       marginTop: '6px',
                       paddingTop: '10px',
                       display: 'flex',

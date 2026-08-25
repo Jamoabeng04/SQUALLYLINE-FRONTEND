@@ -228,7 +228,7 @@ const TrendingStyles = () => {
     borderRadius: '50%',
     background: isDark ? 'rgba(20,20,20,0.80)' : 'rgba(255,255,255,0.80)',
     backdropFilter: 'blur(12px)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     cursor: 'pointer',
     display: 'flex',
     alignItems: 'center',
@@ -252,7 +252,7 @@ const TrendingStyles = () => {
     width: active ? '24px' : '6px',
     height: '6px',
     borderRadius: '3px',
-    background: active ? colors.primary : isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.20)',
+    background: active ? colors.primary : isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212, 175, 55,0.20)',
     transition: 'all 0.3s ease',
     cursor: 'pointer',
     border: 'none',
@@ -300,8 +300,8 @@ const TrendingStyles = () => {
               onClick={() => scroll('left')}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = isDark
-                  ? 'rgba(168, 137, 79,0.15)'
-                  : 'rgba(168, 137, 79,0.08)';
+                  ? 'rgba(212, 175, 55,0.15)'
+                  : 'rgba(212, 175, 55,0.08)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = isDark
@@ -318,8 +318,8 @@ const TrendingStyles = () => {
               onClick={() => scroll('right')}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = isDark
-                  ? 'rgba(168, 137, 79,0.15)'
-                  : 'rgba(168, 137, 79,0.08)';
+                  ? 'rgba(212, 175, 55,0.15)'
+                  : 'rgba(212, 175, 55,0.08)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = isDark

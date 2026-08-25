@@ -61,7 +61,7 @@ const SERVICE_TYPES = [
     label: 'Consultation',
     blurb: 'Talk through ideas and options',
     icon: Users,
-    color: '#A8894F',
+    color: '#D4AF37',
   },
   {
     value: 'custom_order',
@@ -470,7 +470,7 @@ const BookAppointmentPage = () => {
     padding: '8px 16px',
     borderRadius: '12px',
     background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     color: colors.secondaryText,
     fontSize: '13px',
     cursor: 'pointer',
@@ -485,8 +485,8 @@ const BookAppointmentPage = () => {
     gap: '6px',
     padding: '4px 14px',
     borderRadius: '20px',
-    background: isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.05)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    background: isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.05)',
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     fontSize: '11px',
     fontWeight: 500,
     color: colors.primary,
@@ -540,8 +540,8 @@ const BookAppointmentPage = () => {
       completed || active
         ? colors.primary
         : isDark
-        ? 'rgba(168, 137, 79,0.10)'
-        : 'rgba(168, 137, 79,0.15)'
+        ? 'rgba(212, 175, 55,0.10)'
+        : 'rgba(212, 175, 55,0.15)'
     }`,
     fontWeight: 700,
     fontSize: isMobile ? '12px' : '14px',
@@ -555,8 +555,8 @@ const BookAppointmentPage = () => {
     background: completed
       ? colors.primary
       : isDark
-      ? 'rgba(168, 137, 79,0.10)'
-      : 'rgba(168, 137, 79,0.15)',
+      ? 'rgba(212, 175, 55,0.10)'
+      : 'rgba(212, 175, 55,0.15)',
     margin: '0 8px',
     maxWidth: '60px',
     transition: 'all 0.3s ease',
@@ -575,7 +575,7 @@ const BookAppointmentPage = () => {
     padding: isMobile ? '20px' : '28px',
     borderRadius: '16px',
     background: isDark ? 'rgba(20,20,20,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     marginBottom: '20px',
   };
 
@@ -614,7 +614,7 @@ const BookAppointmentPage = () => {
       ? 'rgba(26,26,26,0.40)'
       : 'rgba(255,255,255,0.80)',
     border: `2px solid ${
-      isActive ? color : isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'
+      isActive ? color : isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'
     }`,
     cursor: 'pointer',
     textAlign: 'center',
@@ -669,7 +669,7 @@ const BookAppointmentPage = () => {
       ? 'rgba(26,26,26,0.40)'
       : 'rgba(255,255,255,0.80)',
     border: `1px solid ${
-      isActive ? colors.primary : isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'
+      isActive ? colors.primary : isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'
     }`,
     cursor: 'pointer',
     textAlign: 'center',
@@ -692,7 +692,7 @@ const BookAppointmentPage = () => {
       ? 'rgba(26,26,26,0.40)'
       : 'rgba(255,255,255,0.80)',
     border: `1px solid ${
-      isActive ? colors.primary : isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'
+      isActive ? colors.primary : isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'
     }`,
     cursor: 'pointer',
     textAlign: 'center',
@@ -707,7 +707,7 @@ const BookAppointmentPage = () => {
     padding: '12px 14px',
     borderRadius: '10px',
     background: isDark ? 'rgba(26,26,26,0.60)' : 'rgba(255,255,255,0.80)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     color: colors.text,
     fontSize: '13px',
     outline: 'none',
@@ -735,8 +735,8 @@ const BookAppointmentPage = () => {
     gap: '8px',
     padding: '12px 14px',
     borderRadius: '10px',
-    background: isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.04)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.12)'}`,
+    background: isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.04)',
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.12)'}`,
     fontSize: '12px',
     color: colors.secondaryText,
     lineHeight: 1.6,
@@ -748,7 +748,7 @@ const BookAppointmentPage = () => {
     justifyContent: 'space-between',
     gap: '12px',
     padding: '8px 0',
-    borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     fontSize: '13px',
   };
 
@@ -766,7 +766,7 @@ const BookAppointmentPage = () => {
     color: isPrimary ? '#1A1A1A' : colors.secondaryText,
     border: isPrimary
       ? 'none'
-      : `1px solid ${isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.20)'}`,
+      : `1px solid ${isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212, 175, 55,0.20)'}`,
     cursor: 'pointer',
     fontSize: isMobile ? '13px' : '14px',
     fontWeight: isPrimary ? 600 : 400,
@@ -786,7 +786,7 @@ const BookAppointmentPage = () => {
       ? 'rgba(26,26,26,0.40)'
       : 'rgba(255,255,255,0.80)',
     border: `1px solid ${
-      isActive ? colors.primary : isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'
+      isActive ? colors.primary : isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'
     }`,
     color: isActive ? '#1A1A1A' : colors.text,
     fontSize: '13px',
@@ -899,8 +899,8 @@ const BookAppointmentPage = () => {
                   padding: '16px',
                   borderRadius: '12px',
                   textAlign: 'left',
-                  background: isDark ? 'rgba(168, 137, 79,0.05)' : 'rgba(168, 137, 79,0.03)',
-                  border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+                  background: isDark ? 'rgba(212, 175, 55,0.05)' : 'rgba(212, 175, 55,0.03)',
+                  border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
                 }}
               >
                 <div style={summaryRowStyle}>
@@ -1222,7 +1222,7 @@ const BookAppointmentPage = () => {
                       padding: '14px',
                       borderRadius: '12px',
                       background: isDark ? 'rgba(26,26,26,0.40)' : 'rgba(255,255,255,0.70)',
-                      border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.12)'}`,
+                      border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.12)'}`,
                     }}
                   >
                     <div style={formGridStyle}>
@@ -1415,8 +1415,8 @@ const BookAppointmentPage = () => {
                 marginTop: '18px',
                 padding: '16px',
                 borderRadius: '12px',
-                background: isDark ? 'rgba(168, 137, 79,0.05)' : 'rgba(168, 137, 79,0.03)',
-                border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+                background: isDark ? 'rgba(212, 175, 55,0.05)' : 'rgba(212, 175, 55,0.03)',
+                border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
               }}
             >
               <div

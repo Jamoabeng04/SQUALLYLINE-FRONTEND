@@ -17,13 +17,25 @@ const resolveBaseUrl = () => {
     return process.env.REACT_APP_API_URL.replace(/\/$/, '');
   }
 
-  if (typeof window === 'undefined') {
-    // return `http://127.0.0.1:${API_PORT}`;
-    return 'https://squallyline-api.up.railway.app/'
+  // Check if we're in production (running on Railway)
+  if (typeof window !== 'undefined') {
+    const { hostname, protocol } = window.location;
+    
+    // Check if the current hostname matches the production frontend URL
+    const isProduction = hostname === 'squallyline-frontend-production.up.railway.app' ||
+                         hostname.includes('railway.app');
+    
+    if (isProduction) {
+      // Production API URL
+      return 'https://squallyline-api.up.railway.app';
+    }
+    
+    // Development: use localhost with the port
+    return `${protocol}//${hostname}:${API_PORT}`;
   }
 
-  const { protocol, hostname } = window.location;
-  return `${protocol}//${hostname}:${API_PORT}`;
+  // Server-side rendering fallback
+  return 'https://squallyline-api.up.railway.app';
 };
 
 export const API_BASE_URL = resolveBaseUrl();

@@ -216,7 +216,7 @@ const OrderDetailsPage = () => {
   const cardStyle = {
     borderRadius: '14px',
     background: isDark ? 'rgba(20,20,20,0.40)' : 'rgba(255,255,255,0.40)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     marginBottom: '16px',
     overflow: 'hidden',
   };
@@ -231,7 +231,7 @@ const OrderDetailsPage = () => {
     padding: isMobile ? '14px 16px' : '18px 22px',
     borderRadius: '14px',
     background: isDark ? 'rgba(20,20,20,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
   };
 
   const headerTitleStyle = {
@@ -276,7 +276,7 @@ const OrderDetailsPage = () => {
         ? 'none'
         : variant === 'danger'
           ? '1px solid rgba(239,68,68,0.35)'
-          : `1px solid ${isDark ? 'rgba(168, 137, 79,0.10)' : 'rgba(168, 137, 79,0.15)'}`,
+          : `1px solid ${isDark ? 'rgba(212, 175, 55,0.10)' : 'rgba(212, 175, 55,0.15)'}`,
     cursor: busy ? 'wait' : 'pointer',
     fontSize: isMobile ? '11px' : '12px',
     fontWeight: 600,
@@ -290,7 +290,7 @@ const OrderDetailsPage = () => {
   const tabsStyle = {
     display: 'flex',
     gap: isMobile ? '14px' : '22px',
-    borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+    borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
     marginBottom: '18px',
     overflowX: 'auto',
   };
@@ -337,7 +337,7 @@ const OrderDetailsPage = () => {
     justifyContent: 'space-between',
     gap: '12px',
     padding: '6px 0',
-    borderBottom: `1px solid ${isDark ? 'rgba(168, 137, 79,0.04)' : 'rgba(168, 137, 79,0.06)'}`,
+    borderBottom: `1px solid ${isDark ? 'rgba(212, 175, 55,0.04)' : 'rgba(212, 175, 55,0.06)'}`,
   };
 
   const detailLabelStyle = {
@@ -358,7 +358,7 @@ const OrderDetailsPage = () => {
     padding: isMobile ? '10px' : '14px',
     borderRadius: '12px',
     background: isDark ? 'rgba(20,20,20,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     textAlign: 'center',
   };
 
@@ -387,7 +387,7 @@ const OrderDetailsPage = () => {
     maxWidth: '400px',
     width: '100%',
     background: isDark ? 'rgba(20,20,20,0.97)' : 'rgba(255,255,255,0.97)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.12)' : 'rgba(168, 137, 79,0.18)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.12)' : 'rgba(212, 175, 55,0.18)'}`,
     borderRadius: '16px',
     padding: isMobile ? '22px' : '28px',
     position: 'relative',
@@ -896,8 +896,8 @@ const OrderDetailsPage = () => {
                                     idx <= stageIndex
                                       ? colors.primary
                                       : isDark
-                                        ? 'rgba(168, 137, 79,0.12)'
-                                        : 'rgba(168, 137, 79,0.18)',
+                                        ? 'rgba(212, 175, 55,0.12)'
+                                        : 'rgba(212, 175, 55,0.18)',
                                 }}
                               />
                             ))}
@@ -1052,7 +1052,7 @@ const OrderDetailsPage = () => {
                               flex: 1,
                               width: '2px',
                               minHeight: '18px',
-                              background: isDark ? 'rgba(168, 137, 79,0.12)' : 'rgba(168, 137, 79,0.20)',
+                              background: isDark ? 'rgba(212, 175, 55,0.12)' : 'rgba(212, 175, 55,0.20)',
                               marginTop: '4px',
                             }}
                           />

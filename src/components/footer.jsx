@@ -44,7 +44,7 @@ const Footer = () => {
   // Styles
   const footerStyle = {
     backgroundColor: isDark ? 'rgba(10,10,10,0.95)' : 'rgba(248,246,241,0.95)',
-    borderTop: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    borderTop: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     padding: '40px 20px 20px',
     marginTop: '20px',
   };
@@ -139,7 +139,7 @@ const Footer = () => {
     borderRadius: '12px',
     overflow: 'hidden',
     position: 'relative',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.10)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.10)'}`,
     cursor: 'pointer',
     transition: 'all 0.3s ease',
   };
@@ -171,7 +171,7 @@ const Footer = () => {
     backdropFilter: 'blur(8px)',
     padding: '12px 20px',
     borderRadius: '12px',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.20)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212, 175, 55,0.20)'}`,
   };
 
   const pinIconStyle = {
@@ -192,7 +192,7 @@ const Footer = () => {
 
   // Bottom bar
   const bottomBarStyle = {
-    borderTop: `1px solid ${isDark ? 'rgba(168, 137, 79,0.06)' : 'rgba(168, 137, 79,0.08)'}`,
+    borderTop: `1px solid ${isDark ? 'rgba(212, 175, 55,0.06)' : 'rgba(212, 175, 55,0.08)'}`,
     paddingTop: '16px',
     display: 'flex',
     justifyContent: 'space-between',

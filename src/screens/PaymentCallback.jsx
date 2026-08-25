@@ -70,7 +70,7 @@ const PaymentCallbackPage = () => {
     borderRadius: '18px',
     textAlign: 'center',
     background: isDark ? 'rgba(20,20,20,0.60)' : 'rgba(255,255,255,0.60)',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.08)' : 'rgba(168, 137, 79,0.12)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.08)' : 'rgba(212, 175, 55,0.12)'}`,
   };
 
   const titleStyle = {
@@ -122,7 +122,7 @@ const PaymentCallbackPage = () => {
     padding: '10px 20px',
     borderRadius: '10px',
     background: 'transparent',
-    border: `1px solid ${isDark ? 'rgba(168, 137, 79,0.15)' : 'rgba(168, 137, 79,0.20)'}`,
+    border: `1px solid ${isDark ? 'rgba(212, 175, 55,0.15)' : 'rgba(212, 175, 55,0.20)'}`,
     cursor: 'pointer',
     color: colors.text,
     fontSize: '13px',

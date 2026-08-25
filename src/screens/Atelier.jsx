@@ -55,6 +55,10 @@ const DEFAULT_WORKS = [
 // designed, not tiled. Cycles through big / tall / wide / square.
 const BENTO_SPANS = ['big', 'tall', 'wide', 'sq', 'wide', 'tall', 'sq', 'big'];
 
+// Each footprint enters from a direction that suits its shape, so the grid
+// assembles itself as it scrolls in rather than just fading up as one block.
+const BENTO_REVEAL = { big: 'atl-zoom', tall: 'atl-from-b', wide: 'atl-from-l', sq: 'atl-zoom-soft' };
+
 // Horizontal rail deliberately mixes card shapes (tall, wide, square, grand) so
 // the "works in different shapes and sizes" reads at a glance; cards sit on a
 // shared baseline so the varied heights stagger.
@@ -136,22 +140,31 @@ const Atelier = () => {
     root.scrollTop = 0;
 
     const reveals = Array.from(root.querySelectorAll('.atl-reveal'));
+    const revealNow = (el) => el.classList.add('is-in');
     let observer;
     if ('IntersectionObserver' in window && !reduceMotion) {
+      const vh = root.clientHeight;
       observer = new IntersectionObserver(
         (entries, obs) => {
           entries.forEach((e) => {
             if (e.isIntersecting) {
-              e.target.classList.add('is-in');
+              revealNow(e.target);
               obs.unobserve(e.target);
             }
           });
         },
         { threshold: 0.1, rootMargin: '0px 0px -6% 0px' }
       );
-      reveals.forEach((el) => observer.observe(el));
+      reveals.forEach((el) => {
+        if (el.classList.contains('is-in')) return;
+        // Content that arrives after the user has already scrolled past it (the
+        // API swapping real works in for the samples) would never intersect
+        // again — reveal anything at or above the fold at once, observe the rest.
+        if (el.getBoundingClientRect().top < vh * 0.9) revealNow(el);
+        else observer.observe(el);
+      });
     } else {
-      reveals.forEach((el) => el.classList.add('is-in'));
+      reveals.forEach(revealNow);
     }
 
     const parallax = reduceMotion ? [] : Array.from(root.querySelectorAll('[data-speed]'));
@@ -178,7 +191,7 @@ const Atelier = () => {
       if (observer) observer.disconnect();
       root.removeEventListener('scroll', onScroll);
     };
-  }, [reduceMotion, works.length]);
+  }, [reduceMotion, works]);
 
   const toggleTheme = useCallback(
     () => updateTheme({ mode: isDark ? 'light' : 'dark', system: false }),
@@ -285,7 +298,7 @@ const Atelier = () => {
           {/* Editorial composition: an offset gold hairline frame behind a
               primary portrait, a smaller piece overlapping, a caption chip.
               Decorative — hidden on small screens. */}
-          <div className="atl-hero-art atl-reveal" aria-hidden>
+          <div className="atl-hero-art atl-reveal atl-zoom-soft" aria-hidden>
             <span className="atl-hero-frame" data-speed="0.05" />
             {heroStack[0] && (
               <figure className="atl-hero-card atl-hero-card-a" data-speed="-0.05">
@@ -339,14 +352,14 @@ const Atelier = () => {
         {banners.map((w, i) => (
           <article
             key={w.id}
-            className={`atl-banner atl-reveal ${i % 2 ? 'is-right' : 'is-left'}`}
+            className={`atl-banner ${i % 2 ? 'is-right' : 'is-left'}`}
             onClick={() => navigate(workHref(w))}
           >
-            <div className="atl-banner-media atl-clip">
+            <div className={`atl-banner-media atl-reveal ${i % 2 ? 'atl-from-r' : 'atl-from-l'}`}>
               <img src={w.image} alt={w.name} data-speed={i % 2 ? '-0.03' : '0.03'} loading="lazy" decoding="async" draggable={false} />
               <span className="atl-banner-no">{String(i + 1).padStart(2, '0')}</span>
             </div>
-            <div className="atl-banner-copy">
+            <div className={`atl-banner-copy atl-reveal ${i % 2 ? 'atl-from-l' : 'atl-from-r'}`} style={{ '--d': '140ms' }}>
               <span className="atl-overline"><i /> {w.category || 'Signature'}</span>
               <h2>{w.name}</h2>
               <p>
@@ -372,7 +385,8 @@ const Atelier = () => {
           {rail.map((w, i) => (
             <button
               key={`rail-${w.id}`}
-              className={`atl-rail-card atl-rail-${RAIL_SHAPES[i % RAIL_SHAPES.length]}`}
+              className={`atl-rail-card atl-rail-${RAIL_SHAPES[i % RAIL_SHAPES.length]} atl-reveal atl-from-b`}
+              style={{ '--d': `${Math.min(i, 8) * 70}ms` }}
               onClick={() => navigate(workHref(w))}
             >
               <img src={w.image} alt={w.name} loading="lazy" decoding="async" draggable={false} />
@@ -398,26 +412,29 @@ const Atelier = () => {
         </div>
 
         <div className="atl-bento">
-          {bento.map((w, i) => (
-            <button
-              key={w.id}
-              className={`atl-tile atl-tile-${BENTO_SPANS[i % BENTO_SPANS.length]} atl-reveal`}
-              style={{ '--d': `${(i % 4) * 70}ms` }}
-              onClick={() => navigate(workHref(w))}
-            >
-              <img src={w.image} alt={w.name} loading="lazy" decoding="async" draggable={false} />
-              <span className="atl-tile-frame" />
-              <span className="atl-tile-scrim" />
-              <span className="atl-tile-no">{String(i + 1).padStart(2, '0')}</span>
-              <span className="atl-tile-cap">
-                <b>{w.name}</b>
-                <span className="atl-tile-meta">
-                  {w.category && <em>{w.category}</em>}
-                  <i className="atl-tile-go"><ArrowUpRight size={15} /></i>
+          {bento.map((w, i) => {
+            const span = BENTO_SPANS[i % BENTO_SPANS.length];
+            return (
+              <button
+                key={w.id}
+                className={`atl-tile atl-tile-${span} atl-reveal ${BENTO_REVEAL[span]}`}
+                style={{ '--d': `${Math.min(i, 7) * 75}ms` }}
+                onClick={() => navigate(workHref(w))}
+              >
+                <img src={w.image} alt={w.name} loading="lazy" decoding="async" draggable={false} />
+                <span className="atl-tile-frame" />
+                <span className="atl-tile-scrim" />
+                <span className="atl-tile-no">{String(i + 1).padStart(2, '0')}</span>
+                <span className="atl-tile-cap">
+                  <b>{w.name}</b>
+                  <span className="atl-tile-meta">
+                    {w.category && <em>{w.category}</em>}
+                    <i className="atl-tile-go"><ArrowUpRight size={15} /></i>
+                  </span>
                 </span>
-              </span>
-            </button>
-          ))}
+              </button>
+            );
+          })}
         </div>
 
         <div className="atl-lookbook-more atl-reveal">
@@ -452,7 +469,7 @@ const Atelier = () => {
             return (
               <button
                 key={s.k}
-                className="atl-step atl-reveal"
+                className="atl-step atl-reveal atl-zoom-soft"
                 style={{ '--d': `${i * 90}ms` }}
                 onClick={() => navigate(s.to)}
               >
@@ -573,17 +590,28 @@ const ATELIER_CSS = `
 .atl-diamond{display:inline-block;width:5px;height:5px;margin:0 .5em;transform:rotate(45deg);
   background:var(--primary);vertical-align:middle;flex:0 0 auto;}
 
-/* reveal */
-.atl-reveal{opacity:0;transform:translateY(28px);
-  transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1);
+/* reveal — one variable-driven transform so direction, scale and tilt compose
+   on a single element and all resolve to the same resting state on .is-in */
+.atl-reveal{opacity:0;
+  transform:translate3d(var(--rx,0),var(--ry,32px),0) scale(var(--rs,1)) rotate(var(--rr,0deg));
+  transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1.15s cubic-bezier(.16,1,.3,1);
   transition-delay:var(--d,0ms);will-change:opacity,transform;}
-.atl-reveal.is-in{opacity:1;transform:none;}
+.atl-reveal.is-in{opacity:1;transform:translate3d(0,0,0) scale(1) rotate(0deg);}
 .atl-reduce .atl-reveal{opacity:1;transform:none;transition:none;}
 
-/* clip-path image reveal (transform-free, so hover/parallax still work) */
+/* directional entrances — each element travels into its arranged position */
+.atl-from-l{--rx:-58px;--ry:0px;}
+.atl-from-r{--rx:58px;--ry:0px;}
+.atl-from-b{--ry:56px;}
+.atl-zoom{--rs:.9;--ry:16px;}
+.atl-zoom-soft{--rs:.95;--ry:24px;}
+.atl-tilt{--rs:.97;--ry:40px;--rr:-2deg;}
+
+/* clip-path image reveal — composes with transform (separate property), and
+   self-triggers when the clipped node is itself the reveal element */
 .atl-clip{clip-path:inset(0 0 102% 0);
-  transition:clip-path 1.1s cubic-bezier(.16,1,.3,1);transition-delay:var(--cd,60ms);}
-.atl-reveal.is-in .atl-clip,.atl-hero-art.is-in .atl-clip{clip-path:inset(0 0 0 0);}
+  transition:clip-path 1.15s cubic-bezier(.16,1,.3,1);transition-delay:var(--cd,80ms);}
+.atl-reveal.is-in .atl-clip,.atl-hero-art.is-in .atl-clip,.atl-clip.is-in{clip-path:inset(0 0 0 0);}
 .atl-reduce .atl-clip{clip-path:none;transition:none;}
 
 /* progress hairline */

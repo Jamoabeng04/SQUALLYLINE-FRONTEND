@@ -1,0 +1,193 @@
+<title>Squally Line Video Script</title>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+  @page{ size:A4; margin:15mm 14mm 16mm; }
+  :root{
+    --ink:#17140F; --ink-soft:#37312A; --muted:#6F695C; --faint:#9A9484;
+    --gold:#D4AF37; --gold-ink:#8F7128; --line:#E1DACA; --paper:#FFFFFF; --wash:#FBF7EA;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Archivo",system-ui,sans-serif; font-size:11.6pt; line-height:1.5;
+    -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .doc{ max-width:180mm; margin:0 auto; }
+
+  header.mast{ border-bottom:2px solid var(--gold); padding-bottom:10px; margin-bottom:6px; }
+  .kicker{ font-family:"IBM Plex Mono",monospace; font-size:8.5pt; letter-spacing:.2em;
+    text-transform:uppercase; color:var(--gold-ink); margin:0 0 6px; }
+  h1{ font-family:"Cormorant Garamond",Georgia,serif; font-weight:700; font-size:30pt;
+    line-height:1; margin:0; letter-spacing:-.01em; }
+  h1 span{ font-style:italic; font-weight:500; color:var(--muted); font-size:19pt; }
+  .meta{ font-family:"IBM Plex Mono",monospace; font-size:9pt; color:var(--muted);
+    margin-top:8px; display:flex; gap:22px; flex-wrap:wrap; }
+  .meta b{ color:var(--gold-ink); }
+
+  .seg{ display:grid; grid-template-columns:22mm 1fr; gap:8mm; padding:11px 0;
+    border-bottom:1px solid var(--line); break-inside:avoid; page-break-inside:avoid; }
+  .tcol{ font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums; }
+  .tcol .start{ font-size:12pt; font-weight:600; color:var(--ink); }
+  .tcol .dur{ font-size:8.5pt; color:var(--faint); margin-top:3px; }
+  .tcol .idx{ font-size:8pt; color:var(--gold-ink); margin-top:9px; letter-spacing:.1em; }
+
+  .who{ font-family:"IBM Plex Mono",monospace; font-size:9pt; font-weight:600;
+    letter-spacing:.06em; color:var(--ink); text-transform:uppercase;
+    display:inline-block; border-bottom:2px solid var(--gold); padding-bottom:2px; margin:0 0 3px; }
+  .who .role2{ color:var(--muted); font-weight:500; }
+  .stitle{ font-family:"Cormorant Garamond",Georgia,serif; font-style:italic; font-size:14pt;
+    color:var(--muted); margin:2px 0 9px; }
+  .say{ margin:0 0 8px; max-width:63ch; }
+  .say:last-child{ margin-bottom:0; }
+  .sp{ font-family:"IBM Plex Mono",monospace; font-size:7.8pt; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--gold-ink); display:block; margin-bottom:2px; }
+  .fill{ background:var(--wash); color:var(--gold-ink); padding:0 3px; border-radius:3px;
+    font-style:italic; }
+
+  .foot{ font-family:"IBM Plex Mono",monospace; font-size:8pt; color:var(--faint);
+    text-align:center; margin-top:12px; letter-spacing:.05em; }
+</style>
+
+<div class="doc">
+  <header class="mast">
+    <p class="kicker">COE 454 · Software Engineering II · Demonstration Video</p>
+    <h1>Squally Line <span>— speaking script</span></h1>
+    <div class="meta">
+      <span>What each person says · in order</span>
+      <span>Target <b>13:00</b> · allowed 8–15 min</span>
+      <span><b>7</b> speakers</span>
+    </div>
+  </header>
+
+  <!-- 1 -->
+  <div class="seg">
+    <div class="tcol"><div class="start">0:00</div><div class="dur">1:15</div><div class="idx">01</div></div>
+    <div>
+      <p class="who">Project Manager</p>
+      <p class="stitle">The client and the problem</p>
+      <p class="say">"Hello, we're a seven-person team from KNUST, and this is <b>Squally Line</b> — a web platform we built for a real client, <span class="fill">[CLIENT NAME]</span>, a fashion designer based in <span class="fill">[CITY]</span>, Ghana."</p>
+      <p class="say">"His business has three centres: bespoke tailoring; ready-to-wear sales; and in-studio consultations and fittings. Before Squally Line all of it ran on paper and WhatsApp — measurements in notebooks, quotes in chat, production tracked in his head. Customers couldn't browse the work, save measurements, or follow an order."</p>
+      <p class="say">"Our brief was to find a real client, understand the problem, and solve it using software engineering — following the process. Over the next thirteen minutes we'll show the working system and the engineering path we took."</p>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="seg">
+    <div class="tcol"><div class="start">1:15</div><div class="dur">1:30</div><div class="idx">02</div></div>
+    <div>
+      <p class="who">Project Manager</p>
+      <p class="stitle">How we gathered requirements</p>
+      <p class="say">"We followed the standard life cycle: problem definition, requirements gathering and analysis, planning and design, implementation, testing, deployment, and now maintenance."</p>
+      <p class="say">"There are many elicitation techniques; we chose the ones that fit a single expert client. Our <b>primary method was semi-structured stakeholder interviews</b> — open-ended questions about how he runs his studio. Our <b>second was direct observation, or contextual inquiry</b> — we watched him measure a client and run an order end to end. Those were supported by <b>document analysis</b> of his paper measurement books and WhatsApp chats, and by <b>iterative prototyping</b> of mock-ups reviewed with him."</p>
+      <p class="say">"That gave us our requirements. The <b>functional</b> ones — what the system does — became features like measurement profiles, a catalogue, ordering, and a quote-and-approval workflow. The <b>non-functional</b> ones we grouped as the course teaches: security, performance and scalability, availability and reliability, usability, and compliance."</p>
+      <p class="say">"We worked <b>Agile and incrementally</b>, prioritising with <b>MoSCoW</b>, shipping a working MVP first and updating the client weekly."</p>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="seg">
+    <div class="tcol"><div class="start">2:45</div><div class="dur">1:30</div><div class="idx">03</div></div>
+    <div>
+      <p class="who">Backend Lead</p>
+      <p class="stitle">Architecture, decision records &amp; the live URL</p>
+      <p class="say">"Squally Line is a classic <b>three-tier client–server web application</b>. The front end is a <b>React single-page app</b> talking to a separate back end over a <b>REST API</b>. The back end is <b>Django with the REST Framework</b>, storing data in <b>PostgreSQL</b>. Both halves deploy independently on <b>Railway</b> — and you can use it live right now at the address on screen."</p>
+      <p class="say">"Authentication is <b>stateless JWT</b> — short-lived access tokens with rotating refresh tokens. That was a deliberate decision, because it lets us scale the API horizontally later without sticky sessions."</p>
+      <p class="say">"We logged decisions like that as <b>Architecture Decision Records</b> — ADRs: splitting the SPA from the API, JWT over sessions, and choosing <b>Paystack</b> because it's built for the Ghanaian market and settles in cedis."</p>
+      <p class="say">"Our <b>third-party systems</b> are Paystack for payments and Railway for hosting, and every library we depend on is <b>permissively licensed</b> — React is MIT, Django is BSD. No copyleft in our tree, so we can legally hand this over as a private commercial product. We verified that with a licence checker."</p>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="seg">
+    <div class="tcol"><div class="start">4:15</div><div class="dur">1:45</div><div class="idx">04</div></div>
+    <div>
+      <p class="who">Frontend Lead <span class="role2">+ Frontend Dev 1 (drives screen)</span></p>
+      <p class="stitle">Demo — the commerce spine</p>
+      <p class="say"><span class="sp">Frontend Lead</span>"Here's the system in the customer's hands. The front door is our <b>Atelier</b> landing — a cinematic brand intro — and from there the customer enters the shop."</p>
+      <p class="say">"Everything is live data. The catalogue is a <b>category tree</b> with search and filters. We separate <b>ready-to-wear products</b>, which have stock and buy directly, from <b>made-to-order styles</b>, which come next."</p>
+      <p class="say">"Watch the buying flow. The cart is <b>owned by the server</b>, so it survives a refresh or a new device. At checkout the front end creates the order, then hands off to <b>Paystack</b> — we never touch card details. Paystack returns the customer, we verify, and the order appears in their history. This is the core path, working end to end."</p>
+      <p class="say"><span class="sp">Frontend Dev 1 (while clicking)</span>"I'm paying with a Paystack <b>test card</b> so you see the full round trip — initialise, redirect, verify, confirm — with no real charge."</p>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="seg">
+    <div class="tcol"><div class="start">6:00</div><div class="dur">1:30</div><div class="idx">05</div></div>
+    <div>
+      <p class="who">UI Designer <span class="role2">+ Frontend Dev 1 (drives screen)</span></p>
+      <p class="stitle">Demo — measurements, 3D &amp; made-to-measure</p>
+      <p class="say"><span class="sp">UI Designer</span>"This is where the platform earns its place in a tailoring business. Under <b>Measurements</b>, a customer keeps profiles — for themselves and the people they order for, like family — and every set is <b>versioned</b>, so history is kept, not overwritten."</p>
+      <p class="say">"We wanted measurements to feel approachable, so we render a <b>real 3D figure</b> that responds as you fill it in, with an SVG fallback for weaker devices. The whole interface uses one design system — a <b>white, black and gold</b> palette matching the brand, with a dark and light theme. That consistency is a deliberate <b>usability</b> requirement, not decoration."</p>
+      <p class="say">"To request a custom garment the customer fills this guided form — recipient, measurements, fabric, urgency, a consultation slot. Submitting <b>does not charge them</b>; it sends a request to the studio. Payment comes later, once the tailor sends a formal quote — exactly how real bespoke works, and it's what we show next."</p>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="seg">
+    <div class="tcol"><div class="start">7:30</div><div class="dur">1:30</div><div class="idx">06</div></div>
+    <div>
+      <p class="who">Frontend Dev 2 <span class="role2">+ Backend Dev 1</span></p>
+      <p class="stitle">Demo — the proposal &amp; agreement workflow</p>
+      <p class="say"><span class="sp">Frontend Dev 2 (customer side)</span>"This is the heart of the system — the negotiation between customer and studio, done properly. On the <b>Agreement</b> tab the customer sees the studio's <b>proposal</b>: the garment, reference images, total price, deposit, completion date. Proposals are <b>versioned</b> — ask for changes and the studio issues a new version, with the whole exchange recorded."</p>
+      <p class="say">"When the customer is happy, they hit <b>Accept</b> — and watch: the system turns that agreement into a real <b>order</b>."</p>
+      <p class="say"><span class="sp">Backend Dev 1 (server side)</span>"That one click does a lot on the server, all in one <b>atomic transaction</b>. Accepting a proposal automatically <b>creates the order, the order item with the full spec snapshotted in, and the payment schedule</b> — deposit and balance, each with a due date — and links it back to the proposal. We also built a <b>payment gate</b>: until the deposit is paid, the workshop details stay hidden. The rule 'no work starts without a deposit' is enforced in code, not on trust."</p>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="seg">
+    <div class="tcol"><div class="start">9:00</div><div class="dur">1:30</div><div class="idx">07</div></div>
+    <div>
+      <p class="who">Backend Dev 2</p>
+      <p class="stitle">Demo — the staff &amp; admin roles</p>
+      <p class="say">"The system has <b>three roles</b>, each seeing a different world. A <b>customer</b> sees the shop, their measurements and orders. An <b>apprentice</b> — tailoring staff — runs day-to-day shop-floor operations. An <b>admin</b> — the owner — does everything, including pricing and analytics."</p>
+      <p class="say">"From the catalogue manager the studio adds products and styles and uploads images — and on upload the back end auto-converts every image to optimised <b>WebP</b> to stay fast. Under Consultations staff review requests, and in the <b>Proposal Editor</b> the studio composes the quote — the other end of the agreement the customer just accepted."</p>
+      <p class="say">"The <b>Production Queue</b> tracks bespoke work through real stages — pattern-making, cutting, sewing, fitting, finishing, quality check — <b>sorted by deadline and flagging at-risk orders</b>. And the <b>Analytics</b> dashboard gives the owner revenue, top pieces, production stats and customer retention. That's the role-based control the brief asked for."</p>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="seg">
+    <div class="tcol"><div class="start">10:30</div><div class="dur">0:45</div><div class="idx">08</div></div>
+    <div>
+      <p class="who">Backend Dev 1</p>
+      <p class="stitle">Security &amp; non-functional requirements</p>
+      <p class="say">"Because this handles money and personal data, we treated the non-functional requirements as first-class. On <b>security</b>: JWT with rotating, blacklistable refresh tokens; every admin action protected by <b>role-based permissions</b> on the server, not just hidden in the UI; a strong password policy; and every Paystack webhook <b>signature-verified</b> before we trust it. On <b>performance</b> we paginate lists, optimise images to WebP, and refresh tokens silently. On <b>reliability</b>, checkout and proposal-acceptance run in <b>atomic transactions</b>, and the webhook is <b>idempotent</b>, so a repeated callback can't double-charge. Those qualities sit behind the features you just saw."</p>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="seg">
+    <div class="tcol"><div class="start">11:15</div><div class="dur">0:50</div><div class="idx">09</div></div>
+    <div>
+      <p class="who">UI Designer</p>
+      <p class="stitle">Limitations &amp; problems we faced</p>
+      <p class="say">"No honest demo skips its limits. <b>What isn't done yet:</b> the system doesn't send email or SMS — configured but not wired. Refunds are modelled but have no full workflow. Some copy, like care and return policies, is still static. And a couple of interface pieces, like the top profile menu, are on placeholder data — which is why we've used the sidebar throughout."</p>
+      <p class="say">"<b>The problems we faced</b> were as much practice as code. Coordinating <b>seven people on one codebase</b> meant living in Git branches and real merge conflicts. Learning <b>three.js</b> for the 3D figure took time. <b>Deploying to Railway</b> taught us hard lessons about environment config, CORS and static files. And our biggest management challenge was <b>scope creep</b> — which we controlled with MoSCoW and a scope freeze on the MVP."</p>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="seg">
+    <div class="tcol"><div class="start">12:05</div><div class="dur">0:45</div><div class="idx">10</div></div>
+    <div>
+      <p class="who">Backend Lead <span class="role2">then Project Manager</span></p>
+      <p class="stitle">What comes next — is it scalable?</p>
+      <p class="say"><span class="sp">Backend Lead</span>"Is it scalable? Yes — and we can be specific, because the signal to scale is real demand, not ambition. Asked 'what breaks first at ten thousand users?', we'd <b>harden the production config first</b> — secrets and debug into environment variables. Then it's textbook: <b>optimise</b> with indexes and caching, <b>scale vertically</b> on a bigger instance, then <b>scale horizontally</b> — and because our JWT auth is already stateless, many API instances run behind a load balancer with no redesign. First to <b>decompose</b>: media onto object storage and a CDN, plus a background worker for notifications."</p>
+      <p class="say"><span class="sp">Project Manager</span>"On the roadmap after that: real email, SMS and WhatsApp notifications, a full refund flow, and eventually a mobile app. Commercially, since all seven of us are joint authors under Ghana's Copyright Act, we'll <b>assign the IP to the client on final payment</b>, hand over a signed MVP acceptance, and continue on a small hosting-and-support retainer."</p>
+    </div>
+  </div>
+
+  <!-- 11 -->
+  <div class="seg">
+    <div class="tcol"><div class="start">12:50</div><div class="dur">0:30</div><div class="idx">11</div></div>
+    <div>
+      <p class="who">Project Manager</p>
+      <p class="stitle">Close</p>
+      <p class="say">"That's Squally Line — a real problem, for a real client, solved with a real engineering process from requirements to deployment. Our thanks to <span class="fill">[CLIENT NAME]</span> for trusting us with his studio. Try the live platform yourself at squallyline-frontend-production.up.railway.app. Thank you for watching."</p>
+    </div>
+  </div>
+
+  <p class="foot">Runs ≈ 13:20 · trim to 13:00 on the first rehearsal · fill every [BRACKET] before recording</p>
+</div>

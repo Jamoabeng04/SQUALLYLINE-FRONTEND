@@ -1,0 +1,15 @@
+Squallyline
+* Set the video to unlisted
+* Should be accessible in incognito mode 
+* Video should be 8 - 15 mins, clear English audio 
+* State name of Client and location, describe centers of business 
+* Demonstrate how the dystem is used 
+* Showcase important features 
+* If the sustem has multiple roles, we show what every person can see and act
+* Pictorial evidence with the client
+* Talk about architecture of system
+* ARDs
+* Limitations and problems faced
+* What comes after this, is it scalable. What can we change if we want to increase
+* Make tge live url visible in the 
+* Demonstrate any 3rd party systems if any

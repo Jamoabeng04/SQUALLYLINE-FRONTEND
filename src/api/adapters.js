@@ -4,6 +4,7 @@
 // to know both vocabularies.
 
 import { API_BASE_URL } from './config';
+import { itemImages, categoryImages } from './catalogImages';
 
 // Ghana cedi everywhere — the client sells in GHS only.
 export const formatPrice = (value) =>
@@ -50,6 +51,13 @@ export const placeholderFor = (seed = '', label = '') => {
   return `https://placehold.co/600x800/${bg}/${fg}?text=${text}`;
 };
 
+// Frontend-hosted catalogue images (public/catalog/, keyed by slug) stand in
+// for the backend /media/ paths, which Railway wipes on every API redeploy.
+// Prefer them wherever we have them; fall back to the (often dead) media path,
+// then the generated placeholder. Regenerate the maps with `npm run catalog:images`.
+const localItemImages = (slug) => (slug && itemImages[slug]) || null;
+const localItemCover = (slug) => localItemImages(slug)?.[0] || null;
+
 export const GENDER_LABEL = { M: 'Men', F: 'Women', K: 'Kids', U: 'Unisex' };
 
 const badgeFor = (row) => {
@@ -73,7 +81,7 @@ export const adaptProduct = (row) => ({
   categorySlug: row.category_slug || '',
   price: Number(row.final_price ?? row.price ?? 0),
   originalPrice: row.discount_price ? Number(row.price) : null,
-  image: mediaUrl(row.primary_image) || placeholderFor(row.slug || row.id, row.name),
+  image: localItemCover(row.slug) || mediaUrl(row.primary_image) || placeholderFor(row.slug || row.id, row.name),
   gender: row.gender,
   size: row.size,
   stock: row.stock_quantity ?? 0,
@@ -104,7 +112,7 @@ export const adaptReview = (row) => ({
 // garment's own measurements and the first page of reviews.
 export const adaptProductDetail = (row) => ({
   ...adaptProduct(row),
-  images: (row.images || []).map((i) => mediaUrl(i.image)).filter(Boolean),
+  images: localItemImages(row.slug) || (row.images || []).map((i) => mediaUrl(i.image)).filter(Boolean),
   tags: (row.tags || []).map((t) => t.name),
   reviewList: (row.reviews || []).map(adaptReview),
   measurements: {
@@ -127,7 +135,7 @@ export const adaptStyle = (row) => ({
   categorySlug: row.category_slug || '',
   price: Number(row.base_price ?? 0),
   originalPrice: null,
-  image: mediaUrl(row.primary_image) || placeholderFor(row.slug || row.id, row.name),
+  image: localItemCover(row.slug) || mediaUrl(row.primary_image) || placeholderFor(row.slug || row.id, row.name),
   gender: row.gender,
   makingDays: row.estimated_making_time ?? null,
   isCustomizable: row.is_customizable !== false,
@@ -147,7 +155,7 @@ export const adaptStyle = (row) => ({
 
 export const adaptStyleDetail = (row) => ({
   ...adaptStyle(row),
-  images: (row.images || []).map((i) => mediaUrl(i.image)).filter(Boolean),
+  images: localItemImages(row.slug) || (row.images || []).map((i) => mediaUrl(i.image)).filter(Boolean),
   tags: (row.tags || []).map((t) => t.name),
   reviewList: (row.reviews || []).map(adaptReview),
   updatedAt: row.updated_at,
@@ -158,7 +166,7 @@ export const adaptCategory = (row) => ({
   slug: row.slug,
   name: row.name,
   description: row.description || '',
-  image: mediaUrl(row.image) || placeholderFor(row.slug || row.id, row.name),
+  image: categoryImages[row.slug] || mediaUrl(row.image) || placeholderFor(row.slug || row.id, row.name),
   gender: row.gender,
   productCount: row.product_count ?? 0,
   styleCount: row.style_count ?? 0,
@@ -176,16 +184,18 @@ export const adaptCartItem = (row) => {
   const detail = row.product_details || row.style_details || null;
   const snapshot = row.product_snapshot || row.style_snapshot || row.appointment_snapshot || null;
   const appointment = row.appointment_details || null;
+  const slug = detail?.slug || snapshot?.slug || '';
 
   return {
     id: row.id,
     kind,
     name: row.item_name || detail?.name || snapshot?.name || 'Item',
-    slug: detail?.slug || snapshot?.slug || '',
+    slug,
     productId: row.product || detail?.id || null,
     styleId: row.style || null,
     appointmentId: row.appointment || null,
     image:
+      localItemCover(slug) ||
       mediaUrl(detail?.primary_image) ||
       mediaUrl(snapshot?.primary_image) ||
       placeholderFor(row.id, row.item_name || 'Item'),
@@ -246,7 +256,7 @@ export const adaptOrder = (row) => ({
     price: Number(i.price ?? 0),
     total: Number(i.total_price ?? 0),
     // The snapshot is the only image source once an order is placed.
-    image: mediaUrl(i.snapshot?.primary_image) || placeholderFor(i.id, i.item_name || 'Item'),
+    image: localItemCover(i.snapshot?.slug) || mediaUrl(i.snapshot?.primary_image) || placeholderFor(i.id, i.item_name || 'Item'),
     slug: i.snapshot?.slug || '',
     // Everything below is frozen in the snapshot at order time — the live
     // product may have changed price, stock or category since.

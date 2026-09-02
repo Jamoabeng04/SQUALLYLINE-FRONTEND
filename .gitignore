@@ -24,3 +24,7 @@ yarn-error.log*
 
 /.agents
 /.claude
+
+# catalogue seeder credentials — never commit real admin logins
+.env.seed
+scripts/seed/.env.seed

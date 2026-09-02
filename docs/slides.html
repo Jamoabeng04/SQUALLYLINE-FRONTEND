@@ -1,0 +1,528 @@
+<title>Squally Line Video Deck</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --paper:#EFEBE2; --stage:#FBFAF7; --panel:#F4F1EA; --panel-2:#FFFFFF;
+    --ink:#17140F; --ink-soft:#403A2F; --muted:#6B6558; --faint:#9A9484;
+    --line:#E1DACA; --line-strong:#D2C9B4;
+    --gold:#D4AF37; --gold-ink:#9A7B2E; --gold-wash:#F6EED4;
+    --good:#3F6F6A; --warn:#B0862B; --crit:#A85A63;
+    --shadow:0 2px 6px rgba(23,20,15,.06),0 24px 60px rgba(23,20,15,.12);
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --paper:#0E0C0A; --stage:#161310; --panel:#201C16; --panel-2:#262119;
+      --ink:#F0EBE1; --ink-soft:#D3CBBB; --muted:#A19988; --faint:#6E6858;
+      --line:#2E2A22; --line-strong:#3E382E;
+      --gold:#D4AF37; --gold-ink:#E4C566; --gold-wash:#2A2415;
+      --good:#6FA69F; --warn:#D8AC4E; --crit:#D68F97;
+      --shadow:0 2px 6px rgba(0,0,0,.4),0 26px 64px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0E0C0A; --stage:#161310; --panel:#201C16; --panel-2:#262119;
+    --ink:#F0EBE1; --ink-soft:#D3CBBB; --muted:#A19988; --faint:#6E6858;
+    --line:#2E2A22; --line-strong:#3E382E;
+    --gold:#D4AF37; --gold-ink:#E4C566; --gold-wash:#2A2415;
+    --good:#6FA69F; --warn:#D8AC4E; --crit:#D68F97;
+    --shadow:0 2px 6px rgba(0,0,0,.4),0 26px 64px rgba(0,0,0,.5);
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Archivo",system-ui,sans-serif; -webkit-font-smoothing:antialiased;
+    min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:22px; gap:14px}
+
+  .deck{width:100%; display:flex; flex-direction:column; align-items:center; gap:14px}
+  .stage-wrap{width:min(96vw,1060px); position:relative}
+  .stage{width:100%; aspect-ratio:16/9; background:var(--stage); border:1px solid var(--line);
+    border-radius:16px; box-shadow:var(--shadow); overflow:hidden; position:relative;
+    container-type:size}
+  :fullscreen .stage,:fullscreen.stage{border-radius:0}
+
+  /* slides */
+  .slide{position:absolute; inset:0; padding:6.5cqh 7cqw; display:none;
+    flex-direction:column; }
+  .slide.on{display:flex}
+  @media (prefers-reduced-motion:no-preference){
+    .slide.on{animation:fade .35s ease both}
+    @keyframes fade{from{opacity:0}to{opacity:1}}
+  }
+  .eyebrow{font-family:"IBM Plex Mono",monospace; font-size:1.9cqmin; letter-spacing:.22em;
+    text-transform:uppercase; color:var(--gold-ink); margin:0 0 3cqh; display:flex;
+    justify-content:space-between; align-items:center}
+  .eyebrow .n{color:var(--faint)}
+  h2{font-family:"Cormorant Garamond",Georgia,serif; font-weight:600; color:var(--ink);
+    font-size:6.4cqmin; line-height:1.02; letter-spacing:-.01em; margin:0 0 3cqh; text-wrap:balance}
+  .lead{font-size:2.7cqmin; color:var(--ink-soft); line-height:1.5; max-width:52ch; margin:0}
+  .slide .row{display:flex; gap:3.4cqw; flex:1; min-height:0}
+  .slide ul{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:1.7cqh}
+  .slide li{font-size:2.45cqmin; color:var(--ink-soft); line-height:1.4; padding-left:3.4cqmin;
+    position:relative}
+  .slide li::before{content:""; position:absolute; left:0; top:.62em; width:1.4cqmin; height:1.4cqmin;
+    background:var(--gold); border-radius:50%}
+  .slide li b{color:var(--ink); font-weight:600}
+  .mono{font-family:"IBM Plex Mono",monospace}
+  .k{font-family:"IBM Plex Mono",monospace; font-size:.9em; background:var(--panel);
+    border:1px solid var(--line); border-radius:5px; padding:.5cqmin 1.1cqmin; color:var(--ink)}
+
+  /* title slide */
+  .cover{justify-content:center; align-items:flex-start; text-align:left}
+  .cover .brandline{width:14cqw; height:.4cqmin; background:var(--gold); margin-bottom:4cqh}
+  .cover h1{font-family:"Cormorant Garamond",Georgia,serif; font-weight:700; font-size:13cqmin;
+    line-height:.9; margin:0; letter-spacing:-.015em}
+  .cover h1 em{font-weight:500; color:var(--gold-ink)}
+  .cover .tag{font-size:2.8cqmin; color:var(--muted); margin:3.4cqh 0 0; max-width:48ch}
+  .cover .url{font-family:"IBM Plex Mono",monospace; font-size:2.3cqmin; color:var(--ink);
+    margin-top:5cqh; padding:1.4cqmin 2.4cqmin; border:1px solid var(--gold); border-radius:999px;
+    display:inline-block}
+  .cover .course{position:absolute; top:6.5cqh; right:7cqw; font-family:"IBM Plex Mono",monospace;
+    font-size:1.9cqmin; letter-spacing:.18em; text-transform:uppercase; color:var(--faint)}
+
+  /* two-column panels */
+  .col{flex:1; background:var(--panel); border:1px solid var(--line); border-radius:12px;
+    padding:3.4cqmin 3.4cqmin; display:flex; flex-direction:column; min-width:0}
+  .col h3{font-family:"IBM Plex Mono",monospace; font-size:1.9cqmin; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--muted); margin:0 0 2.4cqh; font-weight:600}
+  .col.accent{background:var(--gold-wash); border-color:var(--line-strong)}
+
+  /* SDLC row of phases */
+  .phases{display:flex; align-items:stretch; gap:1.2cqw; flex:1}
+  .phase{flex:1; background:var(--panel); border:1px solid var(--line); border-radius:10px;
+    padding:2.4cqmin 1.8cqmin; display:flex; flex-direction:column; justify-content:center; gap:1cqh;
+    position:relative}
+  .phase .idx{font-family:"IBM Plex Mono",monospace; font-size:1.7cqmin; color:var(--gold-ink)}
+  .phase .nm{font-size:2.05cqmin; color:var(--ink); font-weight:600; line-height:1.15}
+  .phase.hi{background:var(--gold-wash); border-color:var(--gold)}
+  .phase.hi .nm{color:var(--gold-ink)}
+
+  /* architecture diagram */
+  .arch{flex:1; display:flex; flex-direction:column; justify-content:center; gap:3cqh}
+  .tier-row{display:flex; align-items:center; justify-content:center; gap:2cqw}
+  .node{background:var(--panel-2); border:1px solid var(--line-strong); border-radius:12px;
+    padding:2.4cqmin 3cqmin; text-align:center; box-shadow:0 1px 2px rgba(0,0,0,.05); min-width:22cqw}
+  .node .t{font-size:2.5cqmin; font-weight:600; color:var(--ink)}
+  .node .s{font-family:"IBM Plex Mono",monospace; font-size:1.7cqmin; color:var(--muted); margin-top:.8cqh}
+  .node.ext{background:var(--gold-wash); border-color:var(--gold); border-style:dashed}
+  .conn{font-family:"IBM Plex Mono",monospace; font-size:2.6cqmin; color:var(--gold-ink)}
+  .conn .lbl{display:block; font-size:1.5cqmin; color:var(--muted); letter-spacing:.06em}
+  .ext-row{display:flex; justify-content:center; gap:3cqw; margin-top:1cqh}
+
+  /* roles matrix */
+  .matrix{display:grid; grid-template-columns:repeat(3,1fr); gap:2cqw; flex:1}
+  .role{background:var(--panel); border:1px solid var(--line); border-radius:12px;
+    padding:2.8cqmin; display:flex; flex-direction:column}
+  .role .rh{font-family:"Cormorant Garamond",serif; font-size:3.4cqmin; font-weight:600; color:var(--ink);
+    margin:0 0 .6cqh}
+  .role .rs{font-family:"IBM Plex Mono",monospace; font-size:1.6cqmin; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--gold-ink); margin-bottom:2cqh}
+  .role.admin{background:var(--gold-wash); border-color:var(--gold)}
+  .role li{font-size:2cqmin; margin-bottom:0}
+  .role ul{gap:1.2cqh}
+
+  /* pipeline (scaling) */
+  .pipe{display:flex; align-items:center; gap:1cqw; flex:1}
+  .step{flex:1; background:var(--panel); border:1px solid var(--line); border-radius:10px;
+    padding:2.6cqmin 1.6cqmin; text-align:center; display:flex; flex-direction:column; gap:1cqh}
+  .step .st{font-size:2.2cqmin; font-weight:600; color:var(--ink)}
+  .step .sd{font-size:1.7cqmin; color:var(--muted); line-height:1.3}
+  .step.first{background:var(--gold-wash); border-color:var(--gold)}
+  .arrow{color:var(--gold-ink); font-size:3cqmin; font-family:"IBM Plex Mono",monospace}
+
+  /* closing */
+  .close-c{justify-content:center; align-items:center; text-align:center}
+  .close-c h2{font-size:8cqmin; margin-bottom:2cqh}
+  .close-c .url{font-family:"IBM Plex Mono",monospace; font-size:2.5cqmin; color:var(--ink);
+    margin-top:4cqh; padding:1.4cqmin 2.8cqmin; border:1px solid var(--gold); border-radius:999px}
+  .close-c .thanks{font-size:2.6cqmin; color:var(--muted)}
+
+  .fill{background:var(--gold-wash); color:var(--gold-ink); border-radius:5px; padding:0 .6cqmin;
+    font-style:italic}
+
+  /* controls */
+  .controls{display:flex; align-items:center; gap:16px; font-family:"IBM Plex Mono",monospace}
+  .controls button{font-family:inherit; font-size:13px; color:var(--ink); background:var(--stage);
+    border:1px solid var(--line-strong); border-radius:8px; padding:8px 14px; cursor:pointer;
+    letter-spacing:.04em}
+  .controls button:hover{border-color:var(--gold); color:var(--gold-ink)}
+  .controls button:focus-visible{outline:2px solid var(--gold); outline-offset:2px}
+  .counter{font-size:13px; color:var(--muted); min-width:66px; text-align:center;
+    font-variant-numeric:tabular-nums}
+  .dots{display:flex; gap:7px}
+  .dots i{width:8px; height:8px; border-radius:50%; background:var(--line-strong); cursor:pointer;
+    display:inline-block; transition:background .15s,transform .15s}
+  .dots i.on{background:var(--gold); transform:scale(1.35)}
+  .hint{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--faint); letter-spacing:.06em}
+
+  @media (max-width:640px){
+    .hint{display:none}
+    .slide li,.node .t,.role li{font-size:2.9cqmin}
+  }
+
+  /* print → one slide per page for PDF export */
+  @media print{
+    @page{size:landscape; margin:0}
+    body{display:block; padding:0; background:#fff}
+    .controls,.hint{display:none!important}
+    .stage-wrap{width:100%}
+    .stage{box-shadow:none; border:none; border-radius:0; page-break-after:always;
+      width:100%; height:100vh; aspect-ratio:auto}
+    .slide{display:flex!important; position:relative; inset:auto; height:100vh}
+  }
+</style>
+
+<div class="deck">
+  <div class="stage-wrap">
+    <div class="stage" id="stage" tabindex="0" aria-label="Slide deck, use arrow keys">
+
+      <!-- 1 · COVER -->
+      <section class="slide cover on">
+        <span class="course">COE 454 · SE II</span>
+        <div class="brandline"></div>
+        <h1>Squally<br>Line<em>.</em></h1>
+        <p class="tag">A web platform built for a real fashion-design client — from requirements to a live, deployed system.</p>
+        <span class="url">squallyline-frontend-production.up.railway.app</span>
+      </section>
+
+      <!-- 2 · CLIENT -->
+      <section class="slide">
+        <p class="eyebrow"><span>The Client</span><span class="n">02 / 13</span></p>
+        <h2>A studio run on paper and WhatsApp</h2>
+        <div class="row">
+          <div class="col">
+            <h3>The client</h3>
+            <ul>
+              <li><b><span class="fill">[Client name]</span></b>, fashion designer</li>
+              <li>Based in <b><span class="fill">[City]</span></b>, Ghana</li>
+              <li>Centres: <b>bespoke tailoring · ready-to-wear · consultations &amp; fittings</b></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>The problem</h3>
+            <ul>
+              <li>Measurements kept in <b>paper notebooks</b></li>
+              <li>Orders &amp; quotes negotiated over <b>WhatsApp</b></li>
+              <li>Production progress tracked <b>in the tailor's head</b></li>
+              <li>Customers <b>couldn't browse, save measurements, or follow an order</b></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 · SDLC -->
+      <section class="slide">
+        <p class="eyebrow"><span>The Process We Followed</span><span class="n">03 / 13</span></p>
+        <h2>A deliberate software development life cycle</h2>
+        <div class="phases">
+          <div class="phase"><span class="idx">01</span><span class="nm">Problem definition</span></div>
+          <div class="phase hi"><span class="idx">02</span><span class="nm">Requirements &amp; analysis</span></div>
+          <div class="phase"><span class="idx">03</span><span class="nm">Planning &amp; design</span></div>
+          <div class="phase"><span class="idx">04</span><span class="nm">Implementation</span></div>
+          <div class="phase"><span class="idx">05</span><span class="nm">Testing</span></div>
+          <div class="phase"><span class="idx">06</span><span class="nm">Deployment</span></div>
+          <div class="phase"><span class="idx">07</span><span class="nm">Maintenance</span></div>
+        </div>
+        <p class="lead" style="margin-top:3cqh">Run <b>Agile &amp; incrementally</b>, prioritised with <b>MoSCoW</b>, shipping a working MVP first.</p>
+      </section>
+
+      <!-- 4 · METHODS -->
+      <section class="slide">
+        <p class="eyebrow"><span>Requirements Elicitation</span><span class="n">04 / 13</span></p>
+        <h2>The methods we chose — and why</h2>
+        <div class="row">
+          <div class="col accent">
+            <h3>Primary</h3>
+            <ul>
+              <li><b>Stakeholder interviews</b> — semi-structured, open-ended sessions with the designer</li>
+              <li><b>Observation / contextual inquiry</b> — watched him measure a client and run an order end to end</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Supporting</h3>
+            <ul>
+              <li><b>Document analysis</b> — his paper measurement books &amp; WhatsApp order chats</li>
+              <li><b>Iterative prototyping</b> — mock-ups reviewed and refined with him</li>
+            </ul>
+          </div>
+        </div>
+        <p class="lead" style="margin-top:2.6cqh">Chosen to fit <b>one expert client</b> — not a survey crowd.</p>
+      </section>
+
+      <!-- 5 · FR vs NFR -->
+      <section class="slide">
+        <p class="eyebrow"><span>Requirements</span><span class="n">05 / 13</span></p>
+        <h2>Functional &amp; non-functional</h2>
+        <div class="row">
+          <div class="col">
+            <h3>Functional — what it does</h3>
+            <ul>
+              <li>Measurement profiles &amp; history</li>
+              <li>Catalogue: products &amp; made-to-order styles</li>
+              <li>Cart, checkout &amp; online payment</li>
+              <li>Quote → agreement → order workflow</li>
+              <li>Production tracking &amp; analytics</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Non-functional — how well</h3>
+            <ul>
+              <li><b>Security</b> — money &amp; personal data</li>
+              <li><b>Performance &amp; scalability</b></li>
+              <li><b>Availability &amp; reliability</b></li>
+              <li><b>Usability</b></li>
+              <li><b>Compliance</b> — Ghana payments, cedis</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 · ARCHITECTURE -->
+      <section class="slide">
+        <p class="eyebrow"><span>System Architecture</span><span class="n">06 / 13</span></p>
+        <h2>A three-tier client–server web app</h2>
+        <div class="arch">
+          <div class="tier-row">
+            <div class="node"><div class="t">Browser</div><div class="s">customer · staff</div></div>
+            <div class="conn">→<span class="lbl">HTTPS</span></div>
+            <div class="node"><div class="t">React SPA</div><div class="s">React 19 · Router · three.js</div></div>
+            <div class="conn">→<span class="lbl">REST · JWT</span></div>
+            <div class="node"><div class="t">Django + DRF</div><div class="s">Gunicorn · WhiteNoise</div></div>
+            <div class="conn">→<span class="lbl">SQL</span></div>
+            <div class="node"><div class="t">PostgreSQL</div><div class="s">Railway</div></div>
+          </div>
+          <div class="ext-row">
+            <div class="node ext"><div class="t">Paystack</div><div class="s">payments · GHS · webhook</div></div>
+            <div class="node ext"><div class="t">Railway</div><div class="s">hosting · both tiers</div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7 · ADRs -->
+      <section class="slide">
+        <p class="eyebrow"><span>Architecture Decision Records</span><span class="n">07 / 13</span></p>
+        <h2>Decisions we recorded &amp; can defend</h2>
+        <div class="row">
+          <div class="col">
+            <ul>
+              <li><b>ADR-001</b> — Separate SPA + REST API, not a monolith</li>
+              <li><b>ADR-002</b> — Stateless JWT auth over server sessions</li>
+              <li><b>ADR-003</b> — Paystack gateway (Ghana market, cedis)</li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul>
+              <li><b>ADR-004</b> — PostgreSQL in production</li>
+              <li><b>ADR-005</b> — Railway hosting for both tiers</li>
+              <li><b>ADR-006</b> — Permissive-licence-only dependencies <span class="mono" style="color:var(--muted)">(React MIT · Django BSD)</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8 · ROLES -->
+      <section class="slide">
+        <p class="eyebrow"><span>Role-Based Access</span><span class="n">08 / 13</span></p>
+        <h2>Three roles, three different worlds</h2>
+        <div class="matrix">
+          <div class="role">
+            <p class="rh">Customer</p>
+            <p class="rs">shop</p>
+            <ul>
+              <li>Browse &amp; buy</li>
+              <li>Measurements &amp; people</li>
+              <li>Requests &amp; orders</li>
+              <li>Accept proposals</li>
+            </ul>
+          </div>
+          <div class="role">
+            <p class="rh">Apprentice</p>
+            <p class="rs">shop floor</p>
+            <ul>
+              <li>Review consultations</li>
+              <li>Advance production</li>
+              <li>Manage orders</li>
+              <li>Day-to-day ops</li>
+            </ul>
+          </div>
+          <div class="role admin">
+            <p class="rh">Admin</p>
+            <p class="rs">owner</p>
+            <ul>
+              <li>Everything staff can</li>
+              <li>Catalogue &amp; pricing</li>
+              <li>Compose proposals</li>
+              <li>Analytics &amp; export</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9 · SECURITY / NFR -->
+      <section class="slide">
+        <p class="eyebrow"><span>Non-Functional Requirements</span><span class="n">09 / 13</span></p>
+        <h2>The qualities behind the features</h2>
+        <div class="row">
+          <div class="col">
+            <h3>Security</h3>
+            <ul>
+              <li>JWT with rotating, blacklistable refresh tokens</li>
+              <li><b>Role permissions on the server</b>, not just hidden UI</li>
+              <li>Strong password policy</li>
+              <li>Paystack webhooks <b>signature-verified</b></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Performance &amp; reliability</h3>
+            <ul>
+              <li>Paginated lists · images optimised to <b>WebP</b></li>
+              <li>Silent token refresh</li>
+              <li>Checkout &amp; accept run in <b>atomic transactions</b></li>
+              <li><b>Idempotent</b> webhook — no double-charge</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 · LIMITATIONS -->
+      <section class="slide">
+        <p class="eyebrow"><span>Honesty</span><span class="n">10 / 13</span></p>
+        <h2>Limitations &amp; problems we faced</h2>
+        <div class="row">
+          <div class="col">
+            <h3>Not done yet</h3>
+            <ul>
+              <li>No email / SMS notifications (configured, not wired)</li>
+              <li>Refunds modelled, no full workflow</li>
+              <li>Some policy copy still static</li>
+              <li>Top profile menu on placeholder data</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Challenges faced</h3>
+            <ul>
+              <li><b>7 people, one codebase</b> — Git branches, merge conflicts</li>
+              <li>Learning <b>three.js</b> for the 3D figure</li>
+              <li><b>Railway deploy</b> — env config, CORS, static files</li>
+              <li><b>Scope creep</b> — controlled with MoSCoW &amp; a scope freeze</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11 · SCALING -->
+      <section class="slide">
+        <p class="eyebrow"><span>Scalability</span><span class="n">11 / 13</span></p>
+        <h2>What breaks first at 10,000 users?</h2>
+        <div class="pipe">
+          <div class="step first"><span class="st">Harden</span><span class="sd">secrets &amp; debug into env vars</span></div>
+          <span class="arrow">→</span>
+          <div class="step"><span class="st">Optimise</span><span class="sd">indexes, caching</span></div>
+          <span class="arrow">→</span>
+          <div class="step"><span class="st">Scale up</span><span class="sd">bigger instance</span></div>
+          <span class="arrow">→</span>
+          <div class="step"><span class="st">Scale out</span><span class="sd">many API nodes — JWT already stateless</span></div>
+          <span class="arrow">→</span>
+          <div class="step"><span class="st">Decompose</span><span class="sd">media to CDN, background worker</span></div>
+        </div>
+        <p class="lead" style="margin-top:3cqh">The signal to scale is <b>real demand, not ambition.</b></p>
+      </section>
+
+      <!-- 12 · ROADMAP -->
+      <section class="slide">
+        <p class="eyebrow"><span>What Comes Next</span><span class="n">12 / 13</span></p>
+        <h2>Roadmap &amp; handover</h2>
+        <div class="row">
+          <div class="col">
+            <h3>Product roadmap</h3>
+            <ul>
+              <li>Real email · SMS · WhatsApp notifications</li>
+              <li>Full refund flow</li>
+              <li>Mobile app</li>
+              <li>Deeper analytics</li>
+            </ul>
+          </div>
+          <div class="col accent">
+            <h3>Business &amp; IP</h3>
+            <ul>
+              <li>7 developers = <b>joint authors</b> (Ghana Copyright Act 690)</li>
+              <li><b>IP assigned to client</b> on final payment</li>
+              <li>Signed <b>MVP acceptance</b></li>
+              <li>Hosting &amp; support <b>retainer</b></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 13 · CLOSE -->
+      <section class="slide close-c">
+        <p class="eyebrow" style="justify-content:center"><span>Thank You</span></p>
+        <h2>A real problem, solved with real<br>software engineering.</h2>
+        <p class="thanks">Our thanks to <span class="fill">[Client name]</span> for trusting us with his studio.</p>
+        <span class="url">squallyline-frontend-production.up.railway.app</span>
+      </section>
+
+    </div>
+  </div>
+
+  <div class="controls">
+    <button id="prev" aria-label="Previous slide">‹ Prev</button>
+    <span class="counter" id="counter">1 / 13</span>
+    <button id="next" aria-label="Next slide">Next ›</button>
+    <div class="dots" id="dots" role="tablist" aria-label="Slides"></div>
+    <button id="fs" aria-label="Toggle fullscreen">⛶ Full</button>
+  </div>
+  <p class="hint">← → or Space to move · F fullscreen · P then Ctrl/Cmd-P to print a PDF</p>
+</div>
+
+<script>
+  (function(){
+    var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+    var total = slides.length, i = 0;
+    var counter = document.getElementById('counter');
+    var dotsWrap = document.getElementById('dots');
+    var stage = document.getElementById('stage');
+
+    slides.forEach(function(_, n){
+      var d = document.createElement('i');
+      d.setAttribute('role','tab');
+      d.addEventListener('click', function(){ go(n); });
+      dotsWrap.appendChild(d);
+    });
+    var dots = Array.prototype.slice.call(dotsWrap.children);
+
+    try{ var saved = parseInt(localStorage.getItem('sl_deck_slide'),10);
+      if(!isNaN(saved) && saved>=0 && saved<total) i = saved; }catch(e){}
+
+    function render(){
+      slides.forEach(function(s,n){ s.classList.toggle('on', n===i); });
+      dots.forEach(function(d,n){ d.classList.toggle('on', n===i); });
+      counter.textContent = (i+1)+' / '+total;
+      try{ localStorage.setItem('sl_deck_slide', i); }catch(e){}
+    }
+    function go(n){ i = (n+total)%total; render(); }
+    function next(){ go(i+1); }
+    function prev(){ go(i-1); }
+
+    document.getElementById('next').addEventListener('click', next);
+    document.getElementById('prev').addEventListener('click', prev);
+    document.getElementById('fs').addEventListener('click', function(){
+      var el = stage;
+      if(!document.fullscreenElement){ (el.requestFullscreen||el.webkitRequestFullscreen).call(el); }
+      else { document.exitFullscreen(); }
+    });
+
+    document.addEventListener('keydown', function(e){
+      if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){ e.preventDefault(); next(); }
+      else if(e.key==='ArrowLeft'||e.key==='PageUp'){ e.preventDefault(); prev(); }
+      else if(e.key==='Home'){ go(0); }
+      else if(e.key==='End'){ go(total-1); }
+      else if(e.key==='f'||e.key==='F'){ document.getElementById('fs').click(); }
+    });
+
+    stage.focus();
+    render();
+  })();
+</script>
